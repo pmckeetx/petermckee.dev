@@ -1,0 +1,26 @@
+{
+    "name": "Peter McKee",
+    "logoType": {
+        "mobile": "PM",
+        "desktop": "Peter McKee"
+    },
+    "mainPicture": "/assets/about.jpeg",
+    "mainPictureJPG": "/assets/about.jpeg",
+    "pronunciation": "",
+    "audioFile": "/assets/name-pro.mp3",
+    "cssVarPrefix": "hp",
+    "email": "hello@petermckee.dev",
+    "linkedin": "#",
+    "github": "https://github.com/shrikedb/shrikedb",
+    "resume": "#",
+    "socials": [
+        {
+            "type": "github",
+            "link": "https://github.com/shrikedb/shrikedb"
+        },
+        {
+            "type": "mail",
+            "link": "mailto:hello@petermckee.dev"
+        }
+    ]
+}

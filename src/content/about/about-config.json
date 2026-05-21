@@ -1,0 +1,162 @@
+{
+    "educations": [
+        {
+            "id": "edu-1",
+            "school": "Self-taught & On-the-job",
+            "degree": "Three decades of shipping software",
+            "duration": "1996 - Present",
+            "content": [
+                "Started in Java and .NET; spent 8+ years on the dell.com engineering and support team.",
+                "Continuously hands-on across systems, web, mobile, cloud, and AI—learning by building."
+            ]
+        }
+    ],
+    "experiences": [
+        {
+            "id": "exp-ronin",
+            "company": "Ronin AI",
+            "position": "Lead Developer, Technical Delivery",
+            "duration": "Jan 2025 - Present",
+            "description": [
+                "Lead a boutique AI consultancy, wearing multiple hats across developer experience, technical delivery, marketing, and hands-on implementation—operating with startup agility and minimal structure.",
+                "Architect and ship production AI systems including multi-tenant voice AI with RAG, autonomous agent platforms, and provider-agnostic LLM tooling.",
+                "Author ShrikeDB, a Redis-compatible in-memory database in Rust built on a shared-nothing multi-shard Tokio runtime."
+            ]
+        },
+        {
+            "id": "exp-assemblyai",
+            "company": "AssemblyAI",
+            "position": "Global Head of Community, DevRel, Developer Experience",
+            "duration": "Aug 2024 - Dec 2024",
+            "description": [
+                "Led global DevRel + DX function spanning developer education, evangelism, documentation, and multi-language SDK strategy.",
+                "Owned the roadmap for SDK + documentation improvements across 6 languages, prioritizing friction reduction and time-to-first-successful-call.",
+                "Grew the developer community through high-impact education, including a YouTube channel exceeding 155K subscribers and 13M views.",
+                "Led and coached a team of six Developer Educators/Evangelists."
+            ]
+        },
+        {
+            "id": "exp-sonar",
+            "company": "Sonar",
+            "position": "Vice President - Community & Developer Relations",
+            "duration": "Jan 2023 - Aug 2024",
+            "description": [
+                "Executive owner for developer evangelism strategy across major language ecosystems.",
+                "Led a global org (Developer Advocates + Community leadership) with a shared vision and roadmap for technical assets, field enablement, and community growth.",
+                "Delivered thought leadership and technical talks with reported reach of 8M+ engineers, architects, and technical leaders."
+            ]
+        },
+        {
+            "id": "exp-jfrog",
+            "company": "JFrog",
+            "position": "Sr. Director - Developer Advocacy",
+            "duration": "May 2022 - Jan 2023",
+            "description": [
+                "Led a global team driving developer engagement through education, strategic partnerships, and community outreach.",
+                "Represented JFrog at major events, creating demos and tutorials to help developers onboard and succeed with the platform."
+            ]
+        },
+        {
+            "id": "exp-docker",
+            "company": "Docker, Inc.",
+            "position": "Director - Head of Developer Relations & Community",
+            "duration": "Mar 2020 - May 2022",
+            "description": [
+                "Owned global Developer Evangelism + DX strategy for Docker's 15M+ developer ecosystem.",
+                "Produced and hosted the Docker Build show; led flagship events including DockerCon.",
+                "Revitalized and scaled the Docker Captains and Community Leaders advocacy programs."
+            ]
+        },
+        {
+            "id": "exp-docker-eng",
+            "company": "Docker, Inc.",
+            "position": "Senior Engineering Manager",
+            "duration": "May 2017 - Mar 2020",
+            "description": [
+                "Led re-architecture of four monolithic properties into a unified microservices architecture using CI/CD, AWS, and Docker Swarm.",
+                "Drove infrastructure-as-code adoption with Terraform across Docker's customer-facing properties.",
+                "Managed a 15-person team across 3 timezones owning docs.docker.com, success.docker.com, and support.docker.com."
+            ]
+        },
+        {
+            "id": "exp-supernaut",
+            "company": "Supernaut",
+            "position": "Director of Technology",
+            "duration": "Feb 2014 - May 2017",
+            "description": [
+                "Architected and shipped serverless backends on AWS Lambda and API Gateway, designing event-driven workflows and REST/JSON APIs.",
+                "Managed a combined $1.8M budget across projects including resource planning, hiring, and road-mapping.",
+                "Architected and coded full-stack solutions in JavaScript, React, Redux, Angular, Node.js, and MongoDB."
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "title": "Languages & Runtimes",
+            "tools": ["Rust", "TypeScript", "JavaScript", "Node.js", "Python", "Java", ".NET"]
+        },
+        {
+            "title": "AI / ML",
+            "tools": [
+                "Anthropic Claude",
+                "OpenAI",
+                "Ollama",
+                "RAG",
+                "pgvector",
+                "Agentic Workflows",
+                "Tool Use / Function Calling",
+                "Multi-provider LLM Abstraction",
+                "VAPI",
+                "Prompt Engineering"
+            ]
+        },
+        {
+            "title": "Web & Frontend",
+            "tools": ["React", "Next.js", "Redux", "Angular", "Tailwind v4"]
+        },
+        {
+            "title": "Backend & APIs",
+            "tools": [
+                "Express",
+                "Restify",
+                "REST / JSON APIs",
+                "NextAuth v5",
+                "OAuth",
+                "Webhooks",
+                "RESP wire protocol"
+            ]
+        },
+        {
+            "title": "Databases & Storage",
+            "tools": ["PostgreSQL", "Prisma", "Redis", "MongoDB", "Elasticsearch", "pgvector"]
+        },
+        {
+            "title": "Cloud & Serverless",
+            "tools": ["AWS", "Lambda", "API Gateway", "GCP", "Docker", "Kubernetes", "Docker Swarm", "Terraform"]
+        },
+        {
+            "title": "Systems & Architecture",
+            "tools": [
+                "Tokio async runtime",
+                "Shared-nothing multi-shard",
+                "Extendible hashing",
+                "Multi-tenant SaaS",
+                "RBAC",
+                "Monorepos",
+                "Event-driven systems",
+                "Dependency injection"
+            ]
+        },
+        {
+            "title": "Tooling & Testing",
+            "tools": ["Vitest", "Puppeteer", "Lightpanda", "Tavily", "pnpm / npm workspaces", "Commander"]
+        }
+    ],
+    "blog": [
+        {
+            "id": "blog-1",
+            "title": "ShrikeDB on GitHub",
+            "link": "https://github.com/shrikedb/shrikedb"
+        }
+    ]
+}

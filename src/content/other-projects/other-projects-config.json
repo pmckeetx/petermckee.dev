@@ -1,0 +1,47 @@
+[
+    {
+        "id": "other-project-click-security",
+        "title": "Click Security",
+        "year": "Aug 2013 - Feb 2014",
+        "tags": ["AngularJS", "Node.js", "MongoDB"],
+        "description": "Senior member of the Applications team designing and developing the UI for a network security application. Built custom Angular directives and middle-tier modules in Node.js, and identified and helped fix a memory leak in the Angular.js framework itself.",
+        "image": "/assets/other-projects/post.webp",
+        "jpg": "/assets/other-projects/post.jpeg"
+    },
+    {
+        "id": "other-project-checkmate",
+        "title": "Checkmate Technologies",
+        "year": "Feb 2013 - Aug 2013",
+        "tags": ["Node.js", "Express", "MongoDB", "Leadership"],
+        "description": "Director of Engineering responsible for technical direction and team management while developing web applications on the Node.js + MongoDB stack.",
+        "image": "/assets/other-projects/noq.webp",
+        "jpg": "/assets/other-projects/noq.jpeg"
+    },
+    {
+        "id": "other-project-marketvine",
+        "title": "Storyd @ MarketVine",
+        "year": "Apr 2012 - Feb 2013",
+        "tags": ["iOS", "Architecture", "Mobile"],
+        "description": "Acted as architect and lead engineer for the Storyd iPhone app, owning end-to-end technical design and delivery.",
+        "image": "/assets/other-projects/bank.webp",
+        "jpg": "/assets/other-projects/bank.jpeg"
+    },
+    {
+        "id": "other-project-perficient",
+        "title": "Perficient",
+        "year": "Apr 2010 - Apr 2012",
+        "tags": ["ASP.NET", "Telligent", "Enterprise"],
+        "description": "Senior Technical Architect designing large-scale custom enterprise solutions on Microsoft's ASP.NET and Telligent platforms.",
+        "image": "/assets/other-projects/bunder.webp",
+        "jpg": "/assets/other-projects/bunder.jpeg"
+    },
+    {
+        "id": "other-project-dell",
+        "title": "Dell.com",
+        "year": "8+ years",
+        "tags": ["Java", ".NET", "Web", "Engineering"],
+        "description": "Key member of the dell.com engineering and support team across multiple software engineering roles on the Java and .NET platforms—one of the engagements I'm most proud of from earlier in my career.",
+        "image": "/assets/other-projects/suicide-analyzer.webp",
+        "jpg": "/assets/other-projects/suicide-analyzer.jpeg"
+    }
+]
