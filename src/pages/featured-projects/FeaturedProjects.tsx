@@ -16,6 +16,7 @@ export const FeaturedProjects: FC = () => {
             {configs.featuredProjects.map((project, idx) => (
                 <FeaturedProjectCard
                     imagePosition={idx % 2 === 0 ? ImagePosition.Right : ImagePosition.Left}
+                    isFirst={idx === 0}
                     key={project.id}
                     {...project}
                 />

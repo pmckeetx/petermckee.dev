@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
 export const WorkPageId = "page-work";
+export const SpeakingPageId = "page-speaking";
 export const AboutPageId = "page-about";
 
 export enum Page {
     Work = "work",
+    Speaking = "speaking",
     About = "about",
 }
 
-const pageIds = [WorkPageId, AboutPageId];
+const pageIds = [WorkPageId, SpeakingPageId, AboutPageId];
 
 export const useScroll = () => {
     const [page, setPage] = useState<string>("");

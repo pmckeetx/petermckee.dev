@@ -4,7 +4,7 @@ import { Box, Container, Center, Spinner } from "@chakra-ui/react";
 import AOS from "aos";
 
 import { NavbarHeight } from "theme";
-import { AboutPageId, WorkPageId } from "utils/useScroll";
+import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
 
 import "./App.scss";
 import "aos/dist/aos.css";
@@ -24,6 +24,12 @@ const OtherProjects = lazy(() =>
     import("pages/other-projects/OtherProjects").then((module) => ({
         default: module.OtherProjects,
     })),
+);
+const SpeakingPress = lazy(() =>
+    import("pages/speaking/Speaking").then((module) => ({ default: module.SpeakingPress })),
+);
+const SpeakingMedia = lazy(() =>
+    import("pages/speaking/Speaking").then((module) => ({ default: module.SpeakingMedia })),
 );
 const About = lazy(() => import("pages/about/About").then((module) => ({ default: module.About })));
 
@@ -45,6 +51,11 @@ export const App: FC = () => {
 
                 <Box mt={{ base: "96px", md: NavbarHeight }}>
                     <Landing />
+                    <Box id={SpeakingPageId}>
+                        <PageHeader label="Press" />
+                        <SpeakingPress />
+                    </Box>
+
                     <Box id={WorkPageId}>
                         <PageHeader label="Featured Projects" />
                         <FeaturedProjects />
@@ -52,6 +63,8 @@ export const App: FC = () => {
                         <PageHeader id="page-other-projects" label="Other Projects" />
                         <OtherProjects />
                     </Box>
+
+                    <SpeakingMedia />
 
                     <Box id={AboutPageId}>
                         <PageHeader label="About Me" />

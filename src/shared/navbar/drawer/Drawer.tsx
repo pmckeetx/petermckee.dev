@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 
 import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
-import { AboutPageId, WorkPageId } from "utils/useScroll";
+import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
 import { onResumeOpen } from "utils/Functions";
@@ -80,6 +80,25 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                             <Button
                                 variant="link"
                                 color={navItemColor}
+                                textDecoration={currentPage === SpeakingPageId ? "underline" : "none"}
+                                textDecorationThickness="2px"
+                                textDecorationColor="primary.500"
+                                onClick={() => {
+                                    onClose();
+                                    setTimeout(() => {
+                                        onSectionClick(SpeakingPageId);
+                                    }, 250);
+                                }}
+                                data-aos="fade"
+                                data-aos-delay="300"
+                                fontWeight="600"
+                                fontSize="2xl"
+                            >
+                                Speaking
+                            </Button>
+                            <Button
+                                variant="link"
+                                color={navItemColor}
                                 textDecoration={currentPage === AboutPageId ? "underline" : "none"}
                                 textDecorationThickness="2px"
                                 textDecorationColor="primary.500"
@@ -90,7 +109,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                                     }, 250);
                                 }}
                                 data-aos="fade"
-                                data-aos-delay="300"
+                                data-aos-delay="400"
                                 fontWeight="600"
                                 fontSize="2xl"
                             >
@@ -101,7 +120,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                                 color="primary.500"
                                 onClick={onResumeOpen}
                                 data-aos="fade"
-                                data-aos-delay="400"
+                                data-aos-delay="500"
                                 fontWeight="600"
                                 fontSize="2xl"
                             >

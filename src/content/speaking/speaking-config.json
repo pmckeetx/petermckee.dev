@@ -1,0 +1,104 @@
+{
+    "press": [
+        {
+            "id": "press-forbes",
+            "outlet": "Forbes",
+            "quote": "Applications will start or are already using AI technology to augment or totally replace knowledgebases.",
+            "link": "https://www.forbes.com/sites/joemckendrick/2024/02/28/how-well-be-interacting-with-ai-as-it-takes-on-more-work/",
+            "context": "On how AI is reshaping the developer knowledge stack."
+        },
+        {
+            "id": "press-infoworld",
+            "outlet": "InfoWorld",
+            "quote": "As developers adopt AI for productivity benefits, there's a required responsibility to gut-check what it produces.",
+            "link": "https://www.infoworld.com/article/2336089/10-ways-generative-ai-will-transform-software-development.html",
+            "context": "On developer responsibility in the age of generative AI."
+        },
+        {
+            "id": "press-techzine",
+            "outlet": "Techzine",
+            "quote": "Gen-AI coding assistants are good at suggesting code, but not at stepping back and reflecting on the code and reasoning over its effectiveness.",
+            "link": "https://www.techzine.eu/blogs/applications/121222/sonar-developer-lead-programming-past-the-pitfalls-with-ai-generated-code/",
+            "context": "On the limits of AI coding assistants."
+        }
+    ],
+    "media": [
+        {
+            "id": "media-docker-getting-started",
+            "title": "How to Get Started with Docker",
+            "outlet": "DockerCon / YouTube",
+            "year": "2020",
+            "link": "https://www.youtube.com/watch?v=iqqDU2crIEQ",
+            "tags": ["Keynote", "Docker", "432K views"],
+            "description": "DockerCon talk and companion YouTube tutorial—an introduction to Docker fundamentals that has crossed 430K views and become a canonical starting point for new container engineers."
+        },
+        {
+            "id": "media-pulumi-continuous-previews",
+            "title": "Continuous Previews with Infrastructure as Code",
+            "outlet": "Pulumi",
+            "year": "2021",
+            "link": "https://www.pulumi.com/resources/continuous-previews-infrastructure-as-code/",
+            "tags": ["Talk", "IaC", "DevOps"],
+            "description": "Session on using Pulumi and IaC to spin up per-PR preview environments for sharing and reviewing application changes."
+        },
+        {
+            "id": "media-talk-python",
+            "title": "Docker for Python Developers — Talk Python to Me",
+            "outlet": "Talk Python to Me, Episode 308",
+            "year": "2021",
+            "link": "https://talkpython.fm/episodes/show/308/docker-for-python-developers-2021-edition",
+            "tags": ["Podcast", "Docker", "Python"],
+            "description": "Podcast appearance walking Python developers through containerization patterns and how Docker fits into a modern Python workflow."
+        },
+        {
+            "id": "media-test-guild",
+            "title": "Leveraging AI for Secure DevOps — Test Guild",
+            "outlet": "Test Guild Podcast",
+            "link": "https://testguild.com/podcast/performance/p158-peter/",
+            "tags": ["Podcast", "AI", "DevSecOps"],
+            "description": "Podcast conversation on bringing AI into the DevOps loop without giving up on security or code quality."
+        }
+    ],
+    "writing": [
+        {
+            "id": "writing-devops-noops",
+            "title": "Say 'No' to 'NoOps': Why We Can't Afford to Let AI Run Wild",
+            "outlet": "DevOps.com",
+            "link": "https://devops.com/say-no-to-noops-why-we-cant-afford-to-let-ai-run-wild/",
+            "tags": ["AI", "DevOps", "Opinion"],
+            "description": "An argument against the 'AI takes over Ops' narrative and a case for keeping humans in the loop on production systems."
+        },
+        {
+            "id": "writing-new-stack-velocity",
+            "title": "Bad Code Stalls Developer Velocity",
+            "outlet": "The New Stack",
+            "link": "https://thenewstack.io/bad-code-stalls-developer-velocity/",
+            "tags": ["Clean Code", "Engineering Leadership"],
+            "description": "On the real cost of letting code quality slide—why velocity dies in the codebase before it dies on the roadmap."
+        },
+        {
+            "id": "writing-sonar-cleancodetips",
+            "title": "#CleanCodeTips: Unlock Your Coding Potential",
+            "outlet": "Sonar",
+            "link": "https://www.sonarsource.com/blog/cleancodetips-unlock-your-coding-potential/",
+            "tags": ["Clean Code", "Sonar"],
+            "description": "Series of practical clean-code habits for individual contributors, written during my time leading DevRel at Sonar."
+        },
+        {
+            "id": "writing-docker-node",
+            "title": "Getting Started with Docker Using Node.js — Part 1",
+            "outlet": "Docker Blog",
+            "link": "https://www.docker.com/blog/getting-started-with-docker-using-node-jspart-i/",
+            "tags": ["Docker", "Node.js", "Tutorial"],
+            "description": "Hands-on tutorial introducing Node.js developers to containerization, published on the official Docker blog."
+        },
+        {
+            "id": "writing-docker-nginx",
+            "title": "How to Use the NGINX Docker Official Image",
+            "outlet": "Docker Blog",
+            "link": "https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/",
+            "tags": ["Docker", "NGINX", "Tutorial"],
+            "description": "Guide to the NGINX Docker Official Image—how to configure it, when to extend it, and how to ship it to production."
+        }
+    ]
+}

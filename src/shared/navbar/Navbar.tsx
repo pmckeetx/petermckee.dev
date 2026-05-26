@@ -6,7 +6,7 @@ import { configs } from "shared/content/Content";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
-import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
+import { AboutPageId, SpeakingPageId, useScroll, WorkPageId } from "utils/useScroll";
 import { MenuDrawer } from "./drawer/Drawer";
 import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 
@@ -41,16 +41,28 @@ export const Navbar: FC = () => {
                             <Button
                                 variant="link"
                                 color={navItemColor}
+                                textDecoration={currentPage === SpeakingPageId ? "underline" : "none"}
+                                textDecorationThickness="2px"
+                                textDecorationColor="primary.500"
+                                onClick={() => toSection(SpeakingPageId)}
+                                data-aos="fade"
+                                data-aos-delay="300"
+                            >
+                                Speaking
+                            </Button>
+                            <Button
+                                variant="link"
+                                color={navItemColor}
                                 textDecoration={currentPage === AboutPageId ? "underline" : "none"}
                                 textDecorationThickness="2px"
                                 textDecorationColor="primary.500"
                                 onClick={() => toSection(AboutPageId)}
                                 data-aos="fade"
-                                data-aos-delay="300"
+                                data-aos-delay="400"
                             >
                                 About
                             </Button>
-                            <Button variant="link" onClick={onResumeOpen} data-aos="fade" data-aos-delay="400">
+                            <Button variant="link" onClick={onResumeOpen} data-aos="fade" data-aos-delay="500">
                                 Resume
                             </Button>
                         </HStack>

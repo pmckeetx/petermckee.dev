@@ -21,6 +21,7 @@ interface Props {
     image: string;
     imagePosition: ImagePosition;
     jpg: string;
+    isFirst?: boolean;
 }
 
 const ImagePositionLayoutMapper: Record<ImagePosition, "row" | "row-reverse"> = {
@@ -51,12 +52,14 @@ export const FeaturedProjectCard: FC<Props> = ({
     location,
     year,
     jpg,
+    isFirst,
 }) => {
     return (
         <Flex
             justifyContent="space-between"
             id="featured-project-card"
-            py={{ base: "12", md: "12", lg: '28' }}
+            pt={isFirst ? { base: "0", md: "0" } : { base: "12", md: "12", lg: "28" }}
+            pb={{ base: "12", md: "12", lg: "28" }}
             direction={{ base: "column-reverse", lg: ImagePositionLayoutMapper[imagePosition] }}
         >
             <Flex
