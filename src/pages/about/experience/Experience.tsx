@@ -15,7 +15,7 @@ export const Experience: FC = () => {
             <br />
             <Accordion pt="2" allowMultiple index={experiencesExpanded}>
                 {configs.about.experiences.map((exp, idx) => (
-                    <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.company}`}>
+                    <AccordionItem p="0" border="0" mb="4" key={`panel-${exp.id}`}>
                         <Expandable
                             id={exp.id}
                             title={exp.company}
