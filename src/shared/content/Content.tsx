@@ -9,6 +9,7 @@ import featuredProjects from "content/featured-projects/featured-projects-config
 import otherProjects from "content/other-projects/other-projects-config.json";
 import about from "content/about/about-config.json";
 import speaking from "content/speaking/speaking-config.json";
+import resume from "content/resume/resume-config.json";
 
 import LandingMd from "content/landing/landing.md";
 import AboutMd from "content/about/about.md";
@@ -20,6 +21,7 @@ export const configs = {
     otherProjects,
     about,
     speaking,
+    resume,
 };
 
 interface State {

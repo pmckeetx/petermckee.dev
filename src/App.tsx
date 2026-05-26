@@ -5,6 +5,7 @@ import AOS from "aos";
 
 import { NavbarHeight } from "theme";
 import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
+import { useRoute } from "utils/router";
 
 import "./App.scss";
 import "aos/dist/aos.css";
@@ -32,6 +33,7 @@ const SpeakingMedia = lazy(() =>
     import("pages/speaking/Speaking").then((module) => ({ default: module.SpeakingMedia })),
 );
 const About = lazy(() => import("pages/about/About").then((module) => ({ default: module.About })));
+const Resume = lazy(() => import("pages/resume/Resume").then((module) => ({ default: module.Resume })));
 
 const Loader: FC = () => (
     <Center w="100%" h="100%">
@@ -40,9 +42,19 @@ const Loader: FC = () => (
 );
 
 export const App: FC = () => {
+    const route = useRoute();
+
     useEffect(() => {
         AOS.init({ once: true });
     }, []);
+
+    if (route === "/resume") {
+        return (
+            <Suspense fallback={<Loader />}>
+                <Resume />
+            </Suspense>
+        );
+    }
 
     return (
         <Suspense fallback={<Loader />}>

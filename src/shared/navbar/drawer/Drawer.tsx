@@ -21,7 +21,7 @@ import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
-import { onResumeOpen } from "utils/Functions";
+import { navigate } from "utils/router";
 
 interface Props extends StyleProps {
     onSectionClick: (section: string) => void;
@@ -118,7 +118,12 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                             <Button
                                 variant="link"
                                 color="primary.500"
-                                onClick={onResumeOpen}
+                                onClick={() => {
+                                    onClose();
+                                    setTimeout(() => {
+                                        navigate("/resume");
+                                    }, 250);
+                                }}
                                 data-aos="fade"
                                 data-aos-delay="500"
                                 fontWeight="600"

@@ -1,0 +1,226 @@
+{
+    "name": "Peter A. McKee",
+    "title": "Hands-on Technical Leader",
+    "location": "Round Rock, TX",
+    "email": "hello@petermckee.dev",
+    "summary": "Hands-on technical leader with deep, current experience architecting and shipping production AI systems—autonomous agent platforms, multi-tenant voice AI with RAG, and provider-agnostic LLM tooling. Three decades of engineering experience spanning IC, architect, and director-level roles at Docker, JFrog, AssemblyAI, and Sonar, leading global teams and turning ambiguous requirements into shipped product. Combines engineering depth with clear technical direction and a bias for building.",
+    "skills": [
+        {
+            "category": "Languages & Runtimes",
+            "items": "Rust, TypeScript, JavaScript, Node.js, Python, Java, .NET"
+        },
+        {
+            "category": "AI / ML",
+            "items": "Anthropic Claude, OpenAI, Ollama, LLM integration, Prompt engineering, RAG, pgvector embeddings, Agentic workflows, Tool use / function calling, Multi-provider LLM abstraction, VAPI"
+        },
+        {
+            "category": "Web & Frontend",
+            "items": "React, Next.js, Redux, Angular, Tailwind v4"
+        },
+        {
+            "category": "Backend & APIs",
+            "items": "Express, Restify, REST / JSON APIs, NextAuth v5, OAuth (Google Calendar, Microsoft Graph), Webhooks, RESP wire protocol"
+        },
+        {
+            "category": "Databases & Storage",
+            "items": "PostgreSQL, Prisma, Redis, MongoDB, Elasticsearch, pgvector"
+        },
+        {
+            "category": "Cloud & Serverless",
+            "items": "AWS (Lambda, API Gateway, serverless), GCP, Docker, Kubernetes, Docker Swarm, Terraform"
+        },
+        {
+            "category": "DevOps & Source Control",
+            "items": "CI/CD, Microservices, GitHub, GitLab"
+        },
+        {
+            "category": "Workflow Automation",
+            "items": "n8n, Make, Zapier"
+        },
+        {
+            "category": "Systems & Concurrency",
+            "items": "Tokio async runtime, shared-nothing multi-shard architecture, extendible hashing"
+        },
+        {
+            "category": "Tooling & Testing",
+            "items": "Vitest, Puppeteer, Lightpanda, Tavily, pnpm / npm workspaces, Commander"
+        },
+        {
+            "category": "Architecture",
+            "items": "Multi-tenant SaaS, RBAC, Monorepos, Event-driven systems, Dependency injection"
+        }
+    ],
+    "experience": [
+        {
+            "company": "ShrikeDB — Open Source Project",
+            "role": "Lead Developer & Architect (Rust, Tokio, Redis/RESP)",
+            "duration": "Feb 2026 – Present",
+            "link": "https://github.com/shrikedb/shrikedb",
+            "highlights": [
+                "Architected and built a Redis-compatible in-memory database in Rust, implementing ~95 commands across 6 data-type families (strings, keys, lists, hashes, sets, sorted sets) over the RESP wire protocol — drop-in compatible with redis-cli, redis-benchmark, and existing client libraries.",
+                "Designed a shared-nothing, multi-shard execution model: each shard runs on its own OS thread with a dedicated single-threaded Tokio runtime and exclusively owns its slice of the keyspace, eliminating locks on the hot path and scaling throughput linearly with core count.",
+                "Implemented a Dash-style extendible hash table that avoids stop-the-world rehashes and keeps tail latency flat under load; built a 16-byte CompactObj representation to inline short strings, integers, and small collections without heap allocation.",
+                "Built CRC32 + hash-tag key routing with parallel fan-out and gather for multi-key commands (MGET, MSET, DEL, EXISTS), and shipped RDB persistence (save/load) coordinated across shards via an mpsc-routed coordinator task."
+            ]
+        },
+        {
+            "company": "Ronin AI",
+            "role": "Lead Developer, Technical Delivery",
+            "duration": "Jan 2025 – Present",
+            "highlights": [
+                "Lead a boutique AI consultancy, wearing multiple hats across developer experience, technical delivery, marketing, and hands-on implementation—operating with startup agility and minimal structure."
+            ]
+        },
+        {
+            "company": "AssemblyAI",
+            "role": "Global Head of Community, Developer Relations, Developer Experience",
+            "duration": "Aug 2024 – Dec 2024",
+            "highlights": [
+                "Led global DevRel + DX function spanning developer education, evangelism, documentation, and multi-language SDK strategy, aligning technical assets to onboarding milestones and developer success metrics.",
+                "Owned the roadmap for SDK + documentation improvements across 6 languages, prioritizing friction reduction, consistent API patterns, and high-signal examples that accelerate “first successful call” and production readiness.",
+                "Built a scalable technical asset pipeline—sample apps, demos, tutorials, videos, blogs, and guides—with operational processes to ship content globally and keep it aligned with product releases.",
+                "Acted as the voice of the developer internally: gathered community feedback, synthesized integration pain points, and partnered with Product/Engineering to drive changes in developer workflows and tooling.",
+                "Grew developer community and reach through high-impact education, including a YouTube channel exceeding 155K subscribers and 13M views, demonstrating the ability to scale developer trust and advocacy.",
+                "Led and coached a team of six Developer Educators/Evangelists, defining messaging, technical tone, and content standards to make advanced topics approachable for developers at any level."
+            ]
+        },
+        {
+            "company": "Sonar",
+            "role": "Vice President — Community & Developer Relations",
+            "duration": "Jan 2023 – Aug 2024",
+            "highlights": [
+                "Served as executive owner for developer evangelism strategy across major language ecosystems; built programs that drive adoption through integration guidance, best practices, and developer-first storytelling.",
+                "Led a global org (Developer Advocates + Community leadership) with a shared vision and roadmap for technical assets, field enablement, and community growth at scale.",
+                "Created a framework for consistent, high-quality technical output (demos, reference apps, tutorials, keynotes, and blogs), ensuring content mapped to product capabilities and real developer workflows.",
+                "Built tight cross-functional partnerships with Product/Engineering to translate developer feedback into product and docs improvements, prioritizing onboarding friction and integration reliability.",
+                "Delivered thought leadership and technical talks to large audiences (reported reach 8M+ engineers/architects/technical leaders), strengthening credibility and accelerating community-led advocacy.",
+                "Established measurable operating rhythms (program planning, launch readiness, KPIs) to scale global developer impact without sacrificing technical depth or voice."
+            ]
+        },
+        {
+            "company": "JFrog",
+            "role": "Sr. Director — Developer Advocacy",
+            "duration": "May 2022 – Jan 2023",
+            "highlights": [
+                "As head of Developer Advocacy at JFrog, led a global team to drive developer engagement through education, strategic partnerships, and community outreach. Represented JFrog at major events, creating demos and tutorials to help developers onboard and succeed with the platform."
+            ]
+        },
+        {
+            "company": "Docker, Inc.",
+            "role": "Director — Head of Developer Relations & Community",
+            "duration": "Mar 2020 – May 2022",
+            "highlights": [
+                "Owned global Developer Evangelism + Developer Experience strategy for Docker's developer ecosystem (15M+ developers), aligning community programs, technical assets, and messaging to improve onboarding and day-to-day product success.",
+                "Served as the voice of the developer internally—capturing feedback from community and events, translating friction points into actionable priorities for Product/Engineering and content updates.",
+                "Built and scaled high-impact technical content and education, including producing/hosting the Docker Build show and delivering practical demos and tutorials that simplified complex workflows into repeatable developer patterns.",
+                "Led flagship developer events and programs (e.g., DockerCon) to drive product adoption and community trust; created frameworks for talks, demos, and technical storytelling at scale.",
+                "Revitalized and scaled strategic community advocacy programs (Docker Captains and Community Leaders) to increase developer advocacy, feedback quality, and peer-to-peer enablement."
+            ]
+        },
+        {
+            "company": "Docker, Inc.",
+            "role": "Senior Engineering Manager",
+            "duration": "May 2017 – Mar 2020",
+            "highlights": [
+                "Managed all product delivery schedules, specification reviews, planning, budgeting, and resource allocation for docs.docker.com, success.docker.com, and support.docker.com.",
+                "Responsible for driving the architectural direction for Docker's Enterprise Customer Portal.",
+                "Led the requirements gathering, planning, development, budgeting, and delivery of Docker's self-paced online learning platform.",
+                "Led the re-architecture of four separate monolithic properties into one unified microservices architecture using CI/CD, monitoring, AWS, and Docker Swarm.",
+                "Drove infrastructure-as-code adoption using Terraform to manage AWS resources across Docker's customer-facing properties, standardizing environment provisioning and reducing manual configuration drift.",
+                "Managed a 15-person team across 3 timezones including contractors and vendors.",
+                "Technologies used: Node.js, React, Redux, Express, Restify, MongoDB, Redis, Elasticsearch, Docker, Kubernetes."
+            ]
+        },
+        {
+            "company": "Supernaut",
+            "role": "Director of Technology",
+            "duration": "Feb 2014 – May 2017",
+            "highlights": [
+                "Responsible for overseeing and managing the technical direction of Supernaut's projects and deliverables.",
+                "Managed a combined budget of $1.8M across Supernaut's projects including resource planning, hiring, and road-mapping.",
+                "Supported business development efforts by scoping, drafting, estimating, and delivering proposals.",
+                "Architected and shipped serverless backends on AWS Lambda and API Gateway for client engagements, designing event-driven workflows and REST/JSON APIs that reduced operational overhead and scaled with client demand.",
+                "Architected and coded full-stack solutions for clients.",
+                "Managed and mentored a team of off-shore, near-shore, and on-shore project managers, software developers, and testers.",
+                "Primarily development in JavaScript, ReactJS, Redux, Angular, Node.js, MongoDB."
+            ]
+        },
+        {
+            "company": "Click Security",
+            "role": "Senior Front-End Engineer",
+            "duration": "Aug 2013 – Feb 2014",
+            "highlights": [
+                "Senior member of the applications development team designing and developing the UI for a network security application.",
+                "Developed the UI using Angular.js and designed custom directives.",
+                "Intimate knowledge of Angular.js — helped find and fix a memory leak in the Angular.js framework.",
+                "Developed middle-tier modules in Node.js and MongoDB."
+            ]
+        },
+        {
+            "company": "Checkmate Technologies",
+            "role": "Director of Engineering",
+            "duration": "Feb 2013 – Aug 2013",
+            "highlights": [
+                "Developed web applications using Node.js, Express, and MongoDB."
+            ]
+        },
+        {
+            "company": "MarketVine",
+            "role": "Principal Engineer",
+            "duration": "Apr 2012 – Feb 2013",
+            "highlights": [
+                "Acted as architect and lead engineer for the Storyd iPhone app."
+            ]
+        },
+        {
+            "company": "Perficient",
+            "role": "Senior Technical Architect",
+            "duration": "Apr 2010 – Apr 2012",
+            "highlights": [
+                "Designed large-scale custom enterprise solutions on Microsoft's ASP.NET platform and on the Telligent platform."
+            ]
+        },
+        {
+            "company": "Earlier Experience",
+            "role": "Software Engineering — Java & .NET",
+            "duration": "1996 – 2010",
+            "highlights": [
+                "Held multiple Software Engineering positions across the Java and .NET platforms. One I'm most proud of was being a key part of the dell.com engineering and support team for over 8 years."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Voice Assistant — Multi-tenant AI Phone Receptionist Platform",
+            "stack": "Next.js 16 · TypeScript · Prisma/Postgres · NextAuth v5 · Tailwind v4 · VAPI · Google Calendar / Microsoft Graph",
+            "description": "SaaS platform that lets businesses stand up an AI phone receptionist on their own VAPI account in minutes — answers inbound calls, books appointments against the company's live calendar, and grounds responses in a per-tenant knowledge base, with full call history and role-based access.",
+            "highlights": [
+                "Designed and built a multi-tenant SaaS in Next.js 16 + TypeScript with row-level tenancy in Postgres/Prisma and a three-tier RBAC model (super-admin / company-admin / company-user) on NextAuth v5, scoping every query to the authenticated session's company so calls, appointments, knowledge, and credentials stay isolated across tenants.",
+                "Integrated the VAPI telephony API to programmatically provision per-tenant AI assistants on a BYO-credentials model (each company connects their own VAPI account rather than the platform reselling minutes), with a secured webhook that ingests live call events and persists status, transcripts, summaries, and recordings into a per-tenant call log.",
+                "Shipped two production AI capabilities on top of the voice assistant: real-time appointment booking via VAPI tool-calls backed by Google Calendar and Microsoft Graph OAuth (availability checks, conflict detection, timezone handling, SMS confirmation), and a per-tenant knowledge base using chunked ingestion + pgvector embeddings so the assistant answers freeform business questions grounded in the company's own content."
+            ]
+        },
+        {
+            "name": "Multi-Surface Agent Platform",
+            "stack": "Node.js · Next.js 16 · React 19 · Tailwind v4 · TypeScript · Anthropic / OpenAI / Ollama SDKs · Puppeteer + Lightpanda · Tavily · Redis · Vitest · npm workspaces",
+            "description": "Built a full-stack autonomous AI agent platform as a Node.js monorepo (CLI + Next.js web dashboard + reusable core), supporting multiple LLM providers and headless browser automation for long-running, tool-using agent jobs.",
+            "highlights": [
+                "Designed a provider-agnostic core (`@agent/core`) with pluggable adapters for Anthropic, OpenAI, and Ollama, plus a tool registry, planner, context manager, working/long-term memory (Redis-backed), and per-tool permission gating.",
+                "Shipped a Next.js 16 / React 19 web dashboard with streaming event logs, approval modals for human-in-the-loop tool calls, and per-job views, sharing the same agent runtime as the CLI.",
+                "Integrated headless browser tooling (Lightpanda + Puppeteer) and Tavily web search to give agents reliable web-research and page-interaction capabilities under a unified tool interface.",
+                "Architected the system as a pnpm/npm workspaces monorepo (`core`, `cli`, `web`) with dependency injection and event-driven observability, enabling Vitest unit coverage of the agent loop in isolation from the UI."
+            ]
+        },
+        {
+            "name": "AI Agent Framework (Spec-Driven)",
+            "stack": "Node.js · JavaScript + JSDoc typedefs · Anthropic SDK · Commander · @inquirer/prompts · fast-glob · js-yaml · chalk · ora · Vitest · pnpm",
+            "description": "Designed and implemented a modular Node.js framework for autonomous planning agents that decompose a goal, generate a plan, execute via tools, evaluate results, and replan — built from a complete written spec set before any code.",
+            "highlights": [
+                "Authored a 6-module architecture (Core Orchestrator, Planning Engine, Memory, Tools, LLM Abstraction, Observability) with explicit dependency rules and per-module specs in `docs/`, enforcing a clean acyclic graph and dependency injection throughout.",
+                "Implemented goal decomposition, plan generation, step evaluation, and replanning as separable strategies (iterative, full-plan, reactive), each driven by structured LLM output with runtime schema validation.",
+                "Built a tool system with JSON-Schema input/output validation, configurable timeouts, retry policies, and human-approval gating, plus built-in `think`, `ask-user`, and `sub-task` primitives.",
+                "Delivered usage examples (simple task, custom tools, human-in-the-loop, long-term memory) and a Vitest suite, with JSDoc `@typedef` contracts standing in for TypeScript across the codebase."
+            ]
+        }
+    ]
+}
