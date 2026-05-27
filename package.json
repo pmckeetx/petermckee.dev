@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "24.x"
+    "node": ">=24"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.8.3",
@@ -23,12 +23,15 @@
     "@types/aos": "^3.0.4",
     "@types/node": "^16.11.22",
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "browserslist": {
     "production": [
