@@ -1,13 +1,12 @@
 import { FC } from "react";
 
-import { Button, Flex, IconButton, useBreakpointValue } from "@chakra-ui/react";
+import { Button, Flex, IconButton } from "@chakra-ui/react";
 
 import { ArrowRightIcon, GitHubIcon, LinkIcon } from "utils/Icons";
 import { open } from "utils/Functions";
 
 interface GitHubButtonProps {
     github?: string;
-    display?: any;
 }
 
 interface ReadMoreProps {
@@ -16,8 +15,14 @@ interface ReadMoreProps {
 
 interface LiveDemoProps {
     demo?: string;
-    display?: any;
 }
+
+// Below `lg` these render as icon-only buttons, at `lg`+ as labelled buttons.
+// Both variants are always rendered and toggled with CSS `display` so the
+// server and client markup stay identical (avoids a hydration mismatch that a
+// useBreakpointValue component switch would introduce).
+const mobileOnly = { base: "inline-flex", lg: "none" } as const;
+const desktopOnly = { base: "none", lg: "inline-flex" } as const;
 
 interface Props extends GitHubButtonProps, ReadMoreProps, LiveDemoProps {}
 
@@ -36,42 +41,60 @@ export const ReadMore: FC<ReadMoreProps> = ({ readMore }) => {
     ) : null;
 };
 
-export const GitHubButton: FC<GitHubButtonProps> = ({ github, display }) => {
-    const as = useBreakpointValue({ base: IconButton, lg: Button });
+export const GitHubButton: FC<GitHubButtonProps> = ({ github }) => {
+    if (!github) return null;
 
-    return github ? (
-        <Button
-            data-aos="fade"
-            data-aos-delay="400"
-            as={as}
-            variant="secondary"
-            py="5"
-            display={display}
-            leftIcon={<GitHubIcon />}
-            icon={<GitHubIcon />}
-            onClick={() => open(github)}
-        >
-            GitHub
-        </Button>
-    ) : null;
+    return (
+        <>
+            <IconButton
+                data-aos="fade"
+                data-aos-delay="400"
+                aria-label="GitHub"
+                variant="secondary"
+                py="5"
+                display={mobileOnly}
+                icon={<GitHubIcon />}
+                onClick={() => open(github)}
+            />
+            <Button
+                data-aos="fade"
+                data-aos-delay="400"
+                variant="secondary"
+                py="5"
+                display={desktopOnly}
+                leftIcon={<GitHubIcon />}
+                onClick={() => open(github)}
+            >
+                GitHub
+            </Button>
+        </>
+    );
 };
 
-export const LiveDemo: FC<LiveDemoProps> = ({ demo, display }) => {
-    const as = useBreakpointValue({ base: IconButton, lg: Button });
+export const LiveDemo: FC<LiveDemoProps> = ({ demo }) => {
+    if (!demo) return null;
 
-    return demo ? (
-        <Button
-            data-aos="fade"
-            data-aos-delay="200"
-            as={as}
-            display={display}
-            leftIcon={<LinkIcon fontSize="14pt" />}
-            icon={<LinkIcon fontSize="14pt" />}
-            onClick={() => open(demo)}
-        >
-            Live Demo
-        </Button>
-    ) : null;
+    return (
+        <>
+            <IconButton
+                data-aos="fade"
+                data-aos-delay="200"
+                aria-label="Live Demo"
+                display={mobileOnly}
+                icon={<LinkIcon fontSize="14pt" />}
+                onClick={() => open(demo)}
+            />
+            <Button
+                data-aos="fade"
+                data-aos-delay="200"
+                display={desktopOnly}
+                leftIcon={<LinkIcon fontSize="14pt" />}
+                onClick={() => open(demo)}
+            >
+                Live Demo
+            </Button>
+        </>
+    );
 };
 
 export const ProjectCardFooter: FC<Props> = ({ readMore, github, demo }) => {

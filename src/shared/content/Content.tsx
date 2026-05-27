@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 import { Text, Stack, StyleProps, Link, UnorderedList } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
@@ -39,16 +39,10 @@ const Mapper = {
     [MarkdownFile.About]: AboutMd,
 };
 
-export const useContent = (fileName: MarkdownFile) => {
-    const [data, setData] = useState<State>({ landing: "", about: "" });
-
-    useEffect(() => {
-        fetch(Mapper[fileName])
-            .then((res) => res.text())
-            .then((text) => setData((data) => ({ ...data, [fileName]: text })));
-    }, [fileName]);
-
-    return data;
+export const useContent = (fileName: MarkdownFile): State => {
+    // The .md files are imported as raw strings (see next.config.js), so the
+    // content is available synchronously at render time.
+    return { landing: "", about: "", [fileName]: Mapper[fileName] };
 };
 
 interface Props extends StyleProps {

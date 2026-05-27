@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Box } from "@chakra-ui/react";
 
-import { FeaturedProjectCard, ImagePosition } from "pages/featured-projects/featured-project-card/FeaturedProjectCard";
+import { FeaturedProjectCard, ImagePosition } from "views/featured-projects/featured-project-card/FeaturedProjectCard";
 import { configs } from "shared/content/Content";
 
 export const FeaturedProjects: FC = () => {

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useRouter } from "next/router";
 
 import {
     Box,
@@ -22,7 +23,6 @@ import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { PageHeader } from "shared/page-header/PageHeader";
 import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
-import { navigate } from "utils/router";
 import { ArrowLeftIcon, DownloadIcon, GitHubIcon } from "utils/Icons";
 
 interface Skill {
@@ -122,6 +122,7 @@ const ProjectItem: FC<{ project: Project }> = ({ project }) => {
 };
 
 export const Resume: FC = () => {
+    const router = useRouter();
     const bg = useColorModeValue(bgLight, bgDark);
     const metaColor = useColorModeValue("gray.500", "gray.400");
     const { name, title, location, email, summary, skills, experience, projects } = configs.resume;
@@ -131,7 +132,7 @@ export const Resume: FC = () => {
             <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
                 <Container py="4" px="4">
                     <Flex justifyContent="space-between" alignItems="center">
-                        <Box onClick={() => navigate("/")}>
+                        <Box onClick={() => router.push("/")}>
                             <LogoType text={configs.common.logoType} />
                         </Box>
                         <Flex alignItems="center" gap={{ base: 3, md: 6 }}>
@@ -139,7 +140,7 @@ export const Resume: FC = () => {
                                 variant="link"
                                 color={useColorModeValue("gray.800", "white")}
                                 leftIcon={<ArrowLeftIcon />}
-                                onClick={() => navigate("/")}
+                                onClick={() => router.push("/")}
                             >
                                 <Box as="span" display={{ base: "none", sm: "inline" }}>
                                     Back to site

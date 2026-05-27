@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useRouter } from "next/router";
 
 import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 
@@ -6,11 +7,11 @@ import { configs } from "shared/content/Content";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { AboutPageId, SpeakingPageId, useScroll, WorkPageId } from "utils/useScroll";
-import { navigate } from "utils/router";
 import { MenuDrawer } from "./drawer/Drawer";
 import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 
 export const Navbar: FC = () => {
+    const router = useRouter();
     const bg = useColorModeValue(bgLight, bgDark);
     const navItemColor = useColorModeValue("gray.800", "white");
     const currentPage = useScroll();
@@ -65,7 +66,7 @@ export const Navbar: FC = () => {
                             <Button
                                 variant="link"
                                 color={navItemColor}
-                                onClick={() => navigate("/resume")}
+                                onClick={() => router.push("/resume")}
                                 data-aos="fade"
                                 data-aos-delay="500"
                             >
