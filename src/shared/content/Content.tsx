@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { Children, cloneElement, FC, isValidElement, ReactElement } from "react";
 
 import { Text, Stack, StyleProps, Link, UnorderedList } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
@@ -58,26 +58,34 @@ export const Content: FC<Props> = ({ children, ...rest }) => {
                     a: ({ node, ...props }) => (
                         <Link href={props.href} target="_blank" color="primary.200" {...props} />
                     ),
-                    ul: ({ node, ...props }) => {
-                        const { ordered, ...rest } = props;
+                    ul: ({ node, children, ...props }) => {
+                        // react-markdown v9 no longer passes an `index` prop to
+                        // list items, so stagger the AOS delays here by cloning
+                        // each <li> child with an incrementing delay. Whitespace
+                        // text nodes between items are passed through untouched.
+                        let itemIndex = 0;
 
                         return (
                             <UnorderedList
-                                {...rest}
+                                {...props}
                                 data-aos="fade"
                                 listStylePosition="inside"
                                 display="grid"
                                 gridTemplateColumns="repeat(2, 1fr)"
                                 listStyleType="'‣ '"
                                 fontWeight="600"
-                            />
+                            >
+                                {Children.map(children, (child) =>
+                                    isValidElement(child)
+                                        ? cloneElement(child as ReactElement<{ "data-aos-delay"?: number }>, {
+                                              "data-aos-delay": itemIndex++ * 100 + 400,
+                                          })
+                                        : child
+                                )}
+                            </UnorderedList>
                         );
                     },
-                    li: ({ node, ...props }) => {
-                        const { ordered, ...rest } = props;
-
-                        return <li data-aos="flip-up" data-aos-delay={props.index * 100 + 400} {...rest} />;
-                    },
+                    li: ({ node, ...props }) => <li data-aos="flip-up" {...props} />,
                 }}
             >
                 {children as string}
