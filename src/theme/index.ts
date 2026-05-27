@@ -5,6 +5,7 @@ import { components } from "theme/component-styles/ComponentStyles";
 
 const config: ThemeConfig = {
     cssVarPrefix: "hp",
+    initialColorMode: "dark",
 };
 
 const fonts = {
