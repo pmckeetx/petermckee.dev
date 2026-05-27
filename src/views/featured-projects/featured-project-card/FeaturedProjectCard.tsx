@@ -93,7 +93,7 @@ export const FeaturedProjectCard: FC<Props> = ({
                         data-aos-offset="200"
                         data-aos-delay="200"
                     >
-                        <Image borderRadius="xl" src={image} />
+                        <Image borderRadius="xl" src={image} alt={`${title}-cover-image`} />
                     </Box>
 
                     <Text
