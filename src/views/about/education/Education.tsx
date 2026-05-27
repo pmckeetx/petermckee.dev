@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 
 import { Accordion, AccordionItem } from "@chakra-ui/react";
 import { configs } from "shared/content/Content";
-import { Expandable } from "pages/about/common/expandable/Expandable";
-import { ArticleTitle } from "pages/about/common/title/Title";
+import { Expandable } from "views/about/common/expandable/Expandable";
+import { ArticleTitle } from "views/about/common/title/Title";
 
 export const Education: FC = () => {
     const [educationExpanded, setEducationExpanded] = useState<number[]>([]);

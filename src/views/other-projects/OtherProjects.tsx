@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { configs } from "shared/content/Content";
-import { OtherProjectCard } from "pages/other-projects/other-project-card/OtherProjectCard";
+import { OtherProjectCard } from "views/other-projects/other-project-card/OtherProjectCard";
 import { ChevronDownIcon, ChevronUpIcon } from "utils/Icons";
 
 const initialCount = 3;

@@ -4,8 +4,8 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 
 import { PageHeader } from "shared/page-header/PageHeader";
 import { configs } from "shared/content/Content";
-import { PressQuoteCard } from "pages/speaking/PressQuoteCard";
-import { HighlightCard } from "pages/speaking/HighlightCard";
+import { PressQuoteCard } from "views/speaking/PressQuoteCard";
+import { HighlightCard } from "views/speaking/HighlightCard";
 
 export const SpeakingPress: FC = () => {
     const { press } = configs.speaking;

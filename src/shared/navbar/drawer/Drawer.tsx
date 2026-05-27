@@ -1,4 +1,5 @@
 import { FC, useRef } from "react";
+import { useRouter } from "next/router";
 
 import {
     Box,
@@ -21,7 +22,6 @@ import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
-import { navigate } from "utils/router";
 
 interface Props extends StyleProps {
     onSectionClick: (section: string) => void;
@@ -29,6 +29,7 @@ interface Props extends StyleProps {
 }
 
 export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props }) => {
+    const router = useRouter();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef<any>(null);
     const navItemColor = useColorModeValue("gray.800", "white");
@@ -121,7 +122,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                                 onClick={() => {
                                     onClose();
                                     setTimeout(() => {
-                                        navigate("/resume");
+                                        router.push("/resume");
                                     }, 250);
                                 }}
                                 data-aos="fade"

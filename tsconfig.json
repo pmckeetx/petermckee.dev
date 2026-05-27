@@ -14,9 +14,11 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
+        "incremental": true,
+        "jsx": "preserve",
         "baseUrl": "src",
-        "typeRoots": ["src/content/content.d.ts", "./node_modules/@types"]
+        "plugins": [{ "name": "next" }]
     },
-    "include": ["src"]
+    "include": ["next-env.d.ts", "src", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
 }
