@@ -66,9 +66,18 @@ export const Navbar: FC = () => {
                             <Button
                                 variant="link"
                                 color={navItemColor}
-                                onClick={() => router.push("/resume")}
+                                onClick={() => router.push("/blog")}
                                 data-aos="fade"
                                 data-aos-delay="500"
+                            >
+                                Blog
+                            </Button>
+                            <Button
+                                variant="link"
+                                color={navItemColor}
+                                onClick={() => router.push("/resume")}
+                                data-aos="fade"
+                                data-aos-delay="600"
                             >
                                 Resume
                             </Button>
