@@ -1,0 +1,18 @@
+[
+    {
+        "id": "peter",
+        "name": "Peter McKee",
+        "bio": "Hands-on technical leader architecting and shipping production AI systems, with three decades of engineering experience across IC, architect, and director-level roles at Docker, JFrog, AssemblyAI, and Sonar. Currently building ShrikeDB, a Redis-compatible in-memory database in Rust.",
+        "headshot": "/assets/about.jpeg",
+        "socials": [
+            {
+                "type": "github",
+                "link": "https://github.com/pmckeetx"
+            },
+            {
+                "type": "mail",
+                "link": "mailto:hello@petermckee.dev"
+            }
+        ]
+    }
+]

@@ -118,6 +118,22 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                             </Button>
                             <Button
                                 variant="link"
+                                color={navItemColor}
+                                onClick={() => {
+                                    onClose();
+                                    setTimeout(() => {
+                                        router.push("/blog");
+                                    }, 250);
+                                }}
+                                data-aos="fade"
+                                data-aos-delay="500"
+                                fontWeight="600"
+                                fontSize="2xl"
+                            >
+                                Blog
+                            </Button>
+                            <Button
+                                variant="link"
                                 color="primary.500"
                                 onClick={() => {
                                     onClose();
@@ -126,7 +142,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                                     }, 250);
                                 }}
                                 data-aos="fade"
-                                data-aos-delay="500"
+                                data-aos-delay="600"
                                 fontWeight="600"
                                 fontSize="2xl"
                             >
