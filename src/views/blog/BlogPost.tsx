@@ -9,7 +9,6 @@ import { formatDate } from "lib/format";
 import { Tags } from "shared/tags/Tags";
 import { BlogMarkdown } from "shared/blog/markdown/BlogMarkdown";
 import { BlogSeo } from "shared/blog/seo/BlogSeo";
-import { TableOfContents } from "shared/blog/table-of-contents/TableOfContents";
 import { RelatedPosts } from "shared/blog/related-posts/RelatedPosts";
 import { PrevNext } from "shared/blog/prev-next/PrevNext";
 import { BlogLayout } from "views/blog/BlogLayout";
@@ -71,8 +70,6 @@ export const BlogPost: FC<Props> = ({ post, author, related, older, newer }) => 
                         mt="8"
                     />
                 )}
-
-                <TableOfContents toc={meta.toc} />
 
                 <Box mt="8">
                     <BlogMarkdown>{body}</BlogMarkdown>

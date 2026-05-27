@@ -4,9 +4,8 @@ date: "2026-05-20"
 tags: ["Rust", "Databases", "Systems"]
 author: "peter"
 excerpt: "Why ShrikeDB uses extendible hashing for its keyspace, and how it avoids the stop-the-world rehash that bites most open-addressing tables."
-hero: "/assets/HP.webp"
 heroAlt: "Diagram of an extendible hash table"
-featured: true
+featured: false
 draft: false
 ---
 

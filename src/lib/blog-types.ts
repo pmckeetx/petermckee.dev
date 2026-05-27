@@ -2,12 +2,6 @@
 // import them without pulling the server-only data layer (src/lib/blog.ts)
 // into the browser bundle.
 
-export interface TocEntry {
-    depth: number; // 2 = h2, 3 = h3
-    text: string;
-    id: string; // matches the id rehype-slug generates
-}
-
 export interface Social {
     type: string;
     link: string;
@@ -33,7 +27,6 @@ export interface PostMeta {
     featured: boolean;
     draft: boolean;
     readingTime: string; // e.g. "5 min read"
-    toc: TocEntry[];
 }
 
 export interface Post {

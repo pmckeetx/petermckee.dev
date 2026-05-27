@@ -7,64 +7,14 @@ import path from "path";
 
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import GithubSlugger from "github-slugger";
 
 import authorsData from "content/blog/authors.json";
-import type { Author, Post, PostMeta, TocEntry } from "lib/blog-types";
+import type { Author, Post, PostMeta } from "lib/blog-types";
 
 const POSTS_DIR = path.join(process.cwd(), "src/content/blog/posts");
 const isProd = process.env.NODE_ENV === "production";
 
 const authors = authorsData as Author[];
-
-/** Strip common inline Markdown so heading text + slug match the rendered output. */
-const stripInline = (s: string): string =>
-    s
-        .replace(/`([^`]+)`/g, "$1")
-        .replace(/\*\*([^*]+)\*\*/g, "$1")
-        .replace(/\*([^*]+)\*/g, "$1")
-        .replace(/__([^_]+)__/g, "$1")
-        .replace(/_([^_]+)_/g, "$1")
-        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
-        .trim();
-
-/**
- * Build a table of contents (h2/h3) from the Markdown body. Every heading is fed
- * to a single GithubSlugger instance in document order so the generated ids stay
- * in sync with rehype-slug (which also uses github-slugger and dedupes repeats).
- */
-const extractToc = (content: string): TocEntry[] => {
-    const slugger = new GithubSlugger();
-    const toc: TocEntry[] = [];
-    let inFence = false;
-    let fenceMarker = "";
-
-    for (const line of content.split("\n")) {
-        const fence = line.match(/^\s*(```+|~~~+)/);
-        if (fence) {
-            const marker = fence[1][0];
-            if (!inFence) {
-                inFence = true;
-                fenceMarker = marker;
-            } else if (marker === fenceMarker) {
-                inFence = false;
-            }
-            continue;
-        }
-        if (inFence) continue;
-
-        const heading = line.match(/^(#{1,6})\s+(.*)$/);
-        if (!heading) continue;
-
-        const depth = heading[1].length;
-        const text = stripInline(heading[2].replace(/\s*#+\s*$/, ""));
-        const id = slugger.slug(text); // feed all headings to keep dedup aligned
-
-        if (depth === 2 || depth === 3) toc.push({ depth, text, id });
-    }
-
-    return toc;
-};
 
 const toIsoDate = (value: unknown): string => {
     if (value instanceof Date) return value.toISOString().slice(0, 10);
@@ -99,7 +49,6 @@ const readPost = (slug: string): Post | null => {
         featured: Boolean(data.featured),
         draft: Boolean(data.draft),
         readingTime: readingTime(content).text,
-        toc: extractToc(content),
     };
 
     return { meta, body: content };

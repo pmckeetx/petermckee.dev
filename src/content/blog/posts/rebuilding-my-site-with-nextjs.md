@@ -4,7 +4,6 @@ date: "2026-04-08"
 tags: ["Next.js", "TypeScript", "Web"]
 author: "peter"
 excerpt: "I moved petermckee.dev from a hand-rolled CRA single-page app to Next.js. Here's what got simpler and what I'd do again."
-hero: "/assets/HP.jpeg"
 heroAlt: "The petermckee.dev homepage"
 featured: false
 draft: false
