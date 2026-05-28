@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { Box, Button, Container, Flex, Link, useColorModeValue } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
-import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { RssIcon } from "utils/Icons";
@@ -44,7 +43,6 @@ export const BlogHeader: FC<Props> = ({ secondaryHref, secondaryLabel }) => {
                         >
                             <RssIcon />
                         </Link>
-                        <ColorModeButton />
                     </Flex>
                 </Flex>
             </Container>

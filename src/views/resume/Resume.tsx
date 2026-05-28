@@ -19,7 +19,6 @@ import {
 import { configs } from "shared/content/Content";
 import { Footer } from "shared/footer/Footer";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
-import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { PageHeader } from "shared/page-header/PageHeader";
 import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
@@ -154,7 +153,6 @@ export const Resume: FC = () => {
                                     PDF
                                 </Box>
                             </Button>
-                            <ColorModeButton />
                         </Flex>
                     </Flex>
                 </Container>
