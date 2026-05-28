@@ -7,8 +7,8 @@
         "github": "https://github.com/shrikedb/shrikedb",
         "tags": ["Rust", "Tokio", "Redis/RESP", "Systems", "Concurrency"],
         "description": "A Redis-compatible in-memory database in Rust implementing ~95 commands across 6 data-type families over the RESP wire protocol. Designed around a shared-nothing, multi-shard execution model with a Dash-style extendible hash table that avoids stop-the-world rehashes and keeps tail latency flat under load.",
-        "image": "/assets/featured-projects/trackcta.webp",
-        "jpg": "/assets/featured-projects/trackcta.jpeg"
+        "image": "/assets/featured-projects/shrikedb.webp",
+        "jpg": "/assets/featured-projects/shrikedb.jpeg"
     },
     {
         "id": "featured-project-voice-assistant",
@@ -17,8 +17,8 @@
         "location": "Ronin AI",
         "tags": ["Next.js 16", "TypeScript", "Prisma", "Postgres", "NextAuth v5", "VAPI", "Google Calendar", "Microsoft Graph", "pgvector"],
         "description": "A multi-tenant SaaS platform that lets businesses stand up an AI phone receptionist on their own VAPI account in minutes—answering inbound calls, booking appointments against the company's live calendar, and grounding responses in a per-tenant knowledge base with chunked ingestion and pgvector embeddings.",
-        "image": "/assets/featured-projects/asctb.webp",
-        "jpg": "/assets/featured-projects/asctb.jpeg"
+        "image": "/assets/featured-projects/voice-assistant.webp",
+        "jpg": "/assets/featured-projects/voice-assistant.jpeg"
     },
     {
         "id": "featured-project-agent-platform",
@@ -27,8 +27,8 @@
         "location": "Ronin AI",
         "tags": ["Node.js", "Next.js 16", "React 19", "TypeScript", "Anthropic", "OpenAI", "Ollama", "Puppeteer", "Lightpanda", "Tavily", "Redis"],
         "description": "A full-stack autonomous AI agent platform built as a Node.js monorepo (CLI + Next.js web dashboard + reusable core), with a provider-agnostic adapter layer for Anthropic, OpenAI, and Ollama, plus a tool registry, planner, context manager, and Redis-backed memory for long-running, tool-using agent jobs.",
-        "image": "/assets/featured-projects/scrapbook.webp",
-        "jpg": "/assets/featured-projects/scrapbook.jpeg"
+        "image": "/assets/featured-projects/agent-platform.webp",
+        "jpg": "/assets/featured-projects/agent-platform.jpeg"
     },
     {
         "id": "featured-project-agent-framework",
@@ -37,7 +37,7 @@
         "location": "Ronin AI",
         "tags": ["Node.js", "JSDoc", "Anthropic SDK", "Commander", "Vitest", "pnpm"],
         "description": "A modular Node.js framework for autonomous planning agents that decompose a goal, generate a plan, execute via tools, evaluate results, and replan—built spec-first across a 6-module architecture with explicit dependency rules, JSON-Schema-validated tool I/O, and human-approval gating.",
-        "image": "/assets/featured-projects/measure-ux.webp",
-        "jpg": "/assets/featured-projects/measure-ux.jpeg"
+        "image": "/assets/featured-projects/agent-framework.webp",
+        "jpg": "/assets/featured-projects/agent-framework.jpeg"
     }
 ]
