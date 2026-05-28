@@ -18,7 +18,6 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 
-import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
@@ -51,8 +50,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerHeader px="4">
-                        <Flex justifyContent="space-between">
-                            <ColorModeButton />
+                        <Flex justifyContent="flex-end">
                             <DrawerCloseButton position="relative" top="0" right="0" />
                         </Flex>
                     </DrawerHeader>

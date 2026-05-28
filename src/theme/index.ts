@@ -3,9 +3,13 @@ import { ThemeConfig, extendTheme, withDefaultColorScheme } from "@chakra-ui/rea
 import { PrimaryColors, PrimaryDarkColors } from "theme/colors/Colors";
 import { components } from "theme/component-styles/ComponentStyles";
 
+// Site is dark-mode-only. `initialColorMode` is the value the ColorModeScript
+// inlines pre-hydration to avoid a flash; the runtime mode itself is forced to
+// "dark" by the colorModeManager passed to ChakraProvider in _app.tsx.
 const config: ThemeConfig = {
     cssVarPrefix: "hp",
     initialColorMode: "dark",
+    useSystemColorMode: false,
 };
 
 const fonts = {

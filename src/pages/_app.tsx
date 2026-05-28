@@ -2,10 +2,21 @@ import { FC, useEffect } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, type ColorMode } from "@chakra-ui/react";
 import AOS from "aos";
 
 import { theme } from "theme";
+
+// Lock the site to dark mode. Returning visitors who once toggled to light
+// would otherwise still get light because Chakra reads the stored choice from
+// localStorage; this manager ignores stored/system prefs entirely.
+const forceDarkManager = {
+    type: "localStorage" as const,
+    get: (): ColorMode => "dark",
+    set: () => {
+        /* dark-mode-only: ignore writes */
+    },
+};
 
 import "aos/dist/aos.css";
 import "highlight.js/styles/github-dark.css";
@@ -21,7 +32,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     }, []);
 
     return (
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={theme} colorModeManager={forceDarkManager}>
             <Head>
                 {/* Site-wide defaults. Per-page <Head> (e.g. BlogSeo) overrides any
                     tag sharing the same `key`. */}

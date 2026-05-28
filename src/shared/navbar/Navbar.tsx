@@ -8,7 +8,6 @@ import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
 import { AboutPageId, SpeakingPageId, useScroll, WorkPageId } from "utils/useScroll";
 import { MenuDrawer } from "./drawer/Drawer";
-import { ColorModeButton } from "shared/color-mode-button/ColorModeButton";
 
 export const Navbar: FC = () => {
     const router = useRouter();
@@ -82,7 +81,6 @@ export const Navbar: FC = () => {
                                 Resume
                             </Button>
                         </HStack>
-                        <ColorModeButton />
                     </Flex>
 
                     <MenuDrawer

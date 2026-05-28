@@ -20,4 +20,3 @@ export {
     FiRss as RssIcon,
 } from "react-icons/fi";
 export { HiArrowSmRight as ArrowRightIcon, HiArrowSmLeft as ArrowLeftIcon, HiMail as MailIcon } from "react-icons/hi";
-export { IoMoon as MoonIcon, IoSunny as SunIcon } from "react-icons/io5";
