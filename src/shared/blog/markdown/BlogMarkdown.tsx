@@ -24,7 +24,9 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
 
+import { Callout } from "shared/blog/callout/Callout";
 import { CodeBlock } from "shared/blog/code-block/CodeBlock";
+import { remarkCallouts } from "shared/blog/markdown/remarkCallouts";
 
 interface Props {
     children: string;
@@ -45,7 +47,7 @@ export const BlogMarkdown: FC<Props> = ({ children }) => {
     return (
         <Box fontSize={{ base: "md", lg: "lg" }}>
             <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[remarkGfm, remarkCallouts]}
                 rehypePlugins={[rehypeSlug, rehypeHighlight]}
                 components={{
                     h1: ({ node, ...props }) => (
@@ -86,19 +88,27 @@ export const BlogMarkdown: FC<Props> = ({ children }) => {
                     ul: ({ node, ...props }) => <UnorderedList spacing="2" my="4" pl="4" {...props} />,
                     ol: ({ node, ...props }) => <OrderedList spacing="2" my="4" pl="4" {...props} />,
                     li: ({ node, ...props }) => <ListItem lineHeight="1.7" {...props} />,
-                    blockquote: ({ node, ...props }) => (
-                        <Box
-                            as="blockquote"
-                            borderLeft="4px solid"
-                            borderColor={quoteBorder}
-                            color={quoteColor}
-                            pl="5"
-                            my="6"
-                            fontStyle="italic"
-                            sx={{ "& p": { my: 2 } }}
-                            {...props}
-                        />
-                    ),
+                    blockquote: ({ node, ...props }) => {
+                        // `> [!NOTE]`-style callouts arrive marked by remarkCallouts; anything else is a quote.
+                        const callout = (props as Record<string, unknown>)["data-callout"];
+                        if (typeof callout === "string") {
+                            const title = String((props as Record<string, unknown>)["data-callout-title"] ?? "");
+                            return <Callout type={callout} title={title} {...props} />;
+                        }
+                        return (
+                            <Box
+                                as="blockquote"
+                                borderLeft="4px solid"
+                                borderColor={quoteBorder}
+                                color={quoteColor}
+                                pl="5"
+                                my="6"
+                                fontStyle="italic"
+                                sx={{ "& p": { my: 2 } }}
+                                {...props}
+                            />
+                        );
+                    },
                     img: ({ node, src, alt, ...props }) => (
                         <Image src={src} alt={alt ?? ""} borderRadius="xl" my="6" {...props} />
                     ),
