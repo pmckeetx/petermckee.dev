@@ -5,6 +5,7 @@ import TurndownService from "turndown";
 import { gfm } from "turndown-plugin-gfm";
 
 import { fits, Piece, rebuildBody, SourceBlock, wrap } from "shared/blog/dev-editor/rebuild";
+import { CALLOUT_TITLES } from "shared/blog/markdown/remarkCallouts";
 
 // Local-only editor: edit a post in place, like a document, and save it back to its Markdown. BlogPost
 // loads it only under `next dev`, and its API route answers 404 everywhere else.
@@ -30,6 +31,22 @@ const turndown = new TurndownService({
 });
 turndown.use(gfm);
 turndown.remove(["button", "script", "style"]);
+// Callouts (`> [!WARNING]`, see remarkCallouts) go back to their marker; the rendered title comes from it.
+turndown.remove((node) => (node as HTMLElement).hasAttribute?.("data-callout-heading"));
+turndown.addRule("callout", {
+    filter: (node) => node.nodeName === "BLOCKQUOTE" && node.hasAttribute("data-callout"),
+    replacement: (content, node) => {
+        const el = node as HTMLElement;
+        const type = el.getAttribute("data-callout") ?? "note";
+        const title = el.getAttribute("data-callout-title") ?? "";
+        const custom = title && title !== CALLOUT_TITLES[type] ? ` ${title}` : "";
+        const body = wrap(content.trim(), 113)
+            .split("\n")
+            .map((line) => (line ? `> ${line}` : ">"))
+            .join("\n");
+        return `\n\n> [!${type.toUpperCase()}]${custom}\n${body}\n\n`;
+    },
+});
 
 const container = () => document.getElementById("post-body")?.firstElementChild as HTMLElement | null;
 const titleEl = () => document.querySelector<HTMLElement>("[data-edit-title]");
