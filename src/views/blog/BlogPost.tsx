@@ -1,4 +1,5 @@
 import { FC } from "react";
+import dynamic from "next/dynamic";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
@@ -12,6 +13,13 @@ import { BlogSeo } from "shared/blog/seo/BlogSeo";
 import { RelatedPosts } from "shared/blog/related-posts/RelatedPosts";
 import { PrevNext } from "shared/blog/prev-next/PrevNext";
 import { BlogLayout } from "views/blog/BlogLayout";
+
+// In-page editor for local writing. `next dev` only: in a production build this is a constant false and the
+// editor never reaches the bundle.
+const DevEditor =
+    process.env.NODE_ENV === "development"
+        ? dynamic(() => import("shared/blog/dev-editor/DevEditor"), { ssr: false })
+        : () => null;
 
 interface Props {
     post: Post;
@@ -41,7 +49,7 @@ export const BlogPost: FC<Props> = ({ post, author, related, older, newer }) => 
             <Box as="article" maxW="container.md" mx="auto">
                 <Tags id={meta.slug} tags={meta.tags} onClick={(tag) => router.push(`/blog/tag/${encodeURIComponent(tag)}`)} />
 
-                <Heading as="h1" fontSize={{ base: "4xl", md: "5xl" }} lineHeight="1.1" mt="2">
+                <Heading as="h1" fontSize={{ base: "4xl", md: "5xl" }} lineHeight="1.1" mt="2" data-edit-title>
                     {meta.title}
                 </Heading>
 
@@ -71,9 +79,10 @@ export const BlogPost: FC<Props> = ({ post, author, related, older, newer }) => 
                     />
                 )}
 
-                <Box mt="8">
+                <Box mt="8" id="post-body">
                     <BlogMarkdown>{body}</BlogMarkdown>
                 </Box>
+                <DevEditor slug={meta.slug} />
 
                 {author && (
                     <Flex
