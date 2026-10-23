@@ -743,8 +743,7 @@ tests/test_live.py ..                                                    [100%]
 ====================== 2 passed, 14 deselected in 23.97s =======================
 ```
 
-They took about 24 seconds on api.studio.poly.ai on 23 October 2026, most of it Ivy's voice streaming in real time. The repo's GitHub Actions
-workflow runs the offline tests on every push.
+They took about 24 seconds on api.studio.poly.ai on 23 October 2026, most of it Ivy's voice streaming in real time.
 
 ## Troubleshooting
 
