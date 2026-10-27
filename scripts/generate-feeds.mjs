@@ -81,6 +81,7 @@ const buildSitemap = (posts) => {
         "/",
         "/resume",
         "/blog",
+        "/publications",
         ...posts.map((post) => `/blog/${post.slug}`),
         ...tags.map((tag) => `/blog/tag/${encodeURIComponent(tag)}`),
         ...authors.map((author) => `/blog/author/${author.id}`),
