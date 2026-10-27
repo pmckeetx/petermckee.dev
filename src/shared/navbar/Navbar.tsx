@@ -6,7 +6,7 @@ import { Box, Button, Container, Flex, HStack, useColorModeValue } from "@chakra
 import { configs } from "shared/content/Content";
 import { LogoType } from "shared/navbar/logo-type/LogoType";
 import { bgDark, bgLight } from "theme";
-import { AboutPageId, SpeakingPageId, useScroll, WorkPageId } from "utils/useScroll";
+import { AboutPageId, useScroll, WorkPageId } from "utils/useScroll";
 import { MenuDrawer } from "./drawer/Drawer";
 
 export const Navbar: FC = () => {
@@ -41,14 +41,11 @@ export const Navbar: FC = () => {
                             <Button
                                 variant="link"
                                 color={navItemColor}
-                                textDecoration={currentPage === SpeakingPageId ? "underline" : "none"}
-                                textDecorationThickness="2px"
-                                textDecorationColor="primary.500"
-                                onClick={() => toSection(SpeakingPageId)}
+                                onClick={() => router.push("/publications")}
                                 data-aos="fade"
                                 data-aos-delay="300"
                             >
-                                Speaking
+                                Publications
                             </Button>
                             <Button
                                 variant="link"

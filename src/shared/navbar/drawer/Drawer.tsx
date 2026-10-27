@@ -18,7 +18,7 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 
-import { AboutPageId, SpeakingPageId, WorkPageId } from "utils/useScroll";
+import { AboutPageId, WorkPageId } from "utils/useScroll";
 import { MenuIcon } from "utils/Icons";
 import { Socials } from "shared/socials/Socials";
 
@@ -79,13 +79,10 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                             <Button
                                 variant="link"
                                 color={navItemColor}
-                                textDecoration={currentPage === SpeakingPageId ? "underline" : "none"}
-                                textDecorationThickness="2px"
-                                textDecorationColor="primary.500"
                                 onClick={() => {
                                     onClose();
                                     setTimeout(() => {
-                                        onSectionClick(SpeakingPageId);
+                                        router.push("/publications");
                                     }, 250);
                                 }}
                                 data-aos="fade"
@@ -93,7 +90,7 @@ export const MenuDrawer: FC<Props> = ({ onSectionClick, currentPage, ...props })
                                 fontWeight="600"
                                 fontSize="2xl"
                             >
-                                Speaking
+                                Publications
                             </Button>
                             <Button
                                 variant="link"

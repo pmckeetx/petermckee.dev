@@ -1,6 +1,8 @@
 import { FC } from "react";
 
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import NextLink from "next/link";
+
+import { Box, Flex, Link, SimpleGrid } from "@chakra-ui/react";
 
 import { PageHeader } from "shared/page-header/PageHeader";
 import { configs } from "shared/content/Content";
@@ -37,6 +39,12 @@ export const SpeakingMedia: FC = () => {
                     <HighlightCard key={item.id} delay={(idx % 2) * 100} {...item} />
                 ))}
             </SimpleGrid>
+
+            <Flex mt="10" justifyContent="center">
+                <Link as={NextLink} href="/publications" color="primary.500" fontWeight="600" fontSize="lg">
+                    See all publications, talks & videos →
+                </Link>
+            </Flex>
         </Box>
     );
 };

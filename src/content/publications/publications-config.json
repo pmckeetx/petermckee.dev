@@ -1,0 +1,532 @@
+{
+    "videos": [
+        {
+            "id": "video-getting-started-docker",
+            "youtubeId": "iqqDU2crIEQ",
+            "title": "How to Get Started with Docker",
+            "outlet": "DockerCon 2020",
+            "views": "432K views",
+            "likes": "5.9K likes",
+            "featured": true
+        },
+        {
+            "id": "video-docker-build-react",
+            "youtubeId": "8VHheCkw-7k",
+            "title": "Docker Build: Containerizing a React.js Application",
+            "outlet": "Docker YouTube",
+            "views": "33K views",
+            "likes": "818 likes"
+        },
+        {
+            "id": "video-docker-build-js-tests",
+            "youtubeId": "aUOnQWQgWT0",
+            "title": "Docker Build: Containerizing Your JavaScript Tests Using Docker",
+            "outlet": "Docker YouTube",
+            "views": "4.4K views",
+            "likes": "139 likes"
+        }
+    ],
+    "viewerComments": [
+        { "quote": "I wish Peter would run a whole 'Docker course.' Honestly, this guy is fantastic.", "author": "@sinajafarzadeh9577" },
+        { "quote": "Super crisp presentation. Straight to the points and no beating around the bush.", "author": "@KhajaMD143" },
+        { "quote": "Explained everything about docker in 25 mins.", "author": "@cmindia2003" },
+        { "quote": "The most straightforward video I have watched to understand Docker.", "author": "@carlosmoliveira" }
+    ],
+    "press": [
+        {
+            "id": "press-forbes",
+            "outlet": "Forbes",
+            "quote": "Applications will start or are already using AI technology to augment or totally replace knowledgebases.",
+            "link": "https://www.forbes.com/sites/joemckendrick/2024/02/28/how-well-be-interacting-with-ai-as-it-takes-on-more-work/",
+            "context": "How We'll Be Interacting With AI As It Takes On More Work · Feb 2024"
+        },
+        {
+            "id": "press-infoworld-genai",
+            "outlet": "InfoWorld",
+            "quote": "As developers adopt AI for productivity benefits, there's a required responsibility to gut-check what it produces.",
+            "link": "https://www.infoworld.com/article/2336089/10-ways-generative-ai-will-transform-software-development.html",
+            "context": "10 Ways Generative AI Will Transform Software Development"
+        },
+        {
+            "id": "press-techzine",
+            "outlet": "Techzine",
+            "quote": "Gen-AI coding assistants are good at suggesting code, but not at stepping back and reflecting on the code and reasoning over its effectiveness.",
+            "link": "https://www.techzine.eu/blogs/applications/121222/sonar-developer-lead-programming-past-the-pitfalls-with-ai-generated-code/",
+            "context": "Programming Past the Pitfalls with AI-Generated Code"
+        },
+        {
+            "id": "press-infoworld-devsecops",
+            "outlet": "InfoWorld",
+            "quote": "To bolster QA efforts, developers should integrate static code analysis into their workflow.",
+            "link": "https://www.infoworld.com/article/2337453/12-principles-for-improving-devsecops.html",
+            "context": "12 Principles for Improving DevSecOps"
+        },
+        {
+            "id": "press-devinterrupted",
+            "outlet": "Dev Interrupted",
+            "quote": "We're so early... start small, build upon that, go slow, walk, crawl, run.",
+            "link": "https://devinterrupted.substack.com/p/finding-the-best-gen-ai-use-case",
+            "context": "Finding the Best Gen AI Use Case for Your Dev Team · Aug 2024"
+        },
+        {
+            "id": "press-infoworld-techdebt",
+            "outlet": "InfoWorld",
+            "quote": "If developers don't implement automation to scan and monitor AI-generated code, it means exponentially more code to fix and more tech debt.",
+            "link": "https://www.infoworld.com/article/2336089/10-ways-generative-ai-will-transform-software-development.html",
+            "context": "10 Ways Generative AI Will Transform Software Development"
+        }
+    ],
+    "items": [
+        {
+            "id": "a-noops",
+            "type": "article",
+            "title": "Say 'No' to 'NoOps': Why We Can't Afford to Let AI Run Wild",
+            "outlet": "DevOps.com",
+            "era": "Sonar",
+            "link": "https://devops.com/say-no-to-noops-why-we-cant-afford-to-let-ai-run-wild/",
+            "description": "The importance of human oversight in AI-assisted development."
+        },
+        {
+            "id": "a-ai-quality-speed",
+            "type": "article",
+            "title": "Software Development in the Age of AI: How to Balance Quality and Speed",
+            "outlet": "DevOps.com",
+            "date": "Feb 2024",
+            "era": "Sonar",
+            "link": "https://devops.com/software-development-in-the-age-of-ai-how-to-balance-quality-and-speed/",
+            "description": "Strategies for maintaining code quality while leveraging AI tools."
+        },
+        {
+            "id": "a-hackernoon-ai-clean-code",
+            "type": "article",
+            "title": "Unlocking Developer Productivity: The Key Is AI + Clean Code",
+            "outlet": "HackerNoon",
+            "date": "Jan 2024",
+            "era": "Sonar",
+            "link": "https://hackernoon.com/unlocking-developer-productivity-the-key-is-ai-clean-code",
+            "description": "Why pairing AI assistants with clean code practices is what actually moves developer productivity."
+        },
+        {
+            "id": "a-sonar-2024-predictions",
+            "type": "article",
+            "title": "2024 DevOps Predictions from the Sonar Developer Advocate Team",
+            "outlet": "Sonar Blog",
+            "era": "Sonar",
+            "link": "https://www.sonarsource.com/blog/2024-devops-predictions-from-the-sonar-developer-advocate-team/",
+            "description": "Industry predictions and trends for DevOps in 2024."
+        },
+        {
+            "id": "a-informationweek-ai",
+            "type": "article",
+            "title": "How Developers of All Skill Levels Can Best Leverage AI",
+            "outlet": "InformationWeek",
+            "era": "Sonar",
+            "link": "https://www.informationweek.com/software-services/how-developers-of-all-skill-levels-can-best-leverage-ai",
+            "description": "Practical guidance for developers using AI coding assistants."
+        },
+        {
+            "id": "a-bad-code-velocity",
+            "type": "article",
+            "title": "Bad Code Stalls Developer Velocity",
+            "outlet": "The New Stack",
+            "date": "Jul 2023",
+            "era": "Sonar",
+            "link": "https://thenewstack.io/bad-code-stalls-developer-velocity/",
+            "description": "How poor code quality impacts development speed and team productivity."
+        },
+        {
+            "id": "a-cleancodetips",
+            "type": "article",
+            "title": "#CleanCodeTips: Unlock Your Coding Potential",
+            "outlet": "Sonar Blog",
+            "era": "Sonar",
+            "link": "https://www.sonarsource.com/blog/cleancodetips-unlock-your-coding-potential/",
+            "description": "Tips and strategies for writing cleaner, more maintainable code."
+        },
+        {
+            "id": "a-docker-node-1",
+            "type": "article",
+            "title": "Getting Started with Docker Using Node.js — Part 1",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/getting-started-with-docker-using-node-jspart-i/",
+            "description": "Introduction to containerizing Node.js applications with Docker."
+        },
+        {
+            "id": "a-docker-node-2",
+            "type": "article",
+            "title": "Getting Started with Docker Using Node — Part 2",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/getting-started-with-docker-using-node-part-ii/",
+            "description": "Continued tutorial on Node.js and Docker integration."
+        },
+        {
+            "id": "a-docker-node-local-dev-2",
+            "type": "article",
+            "title": "How To Setup Your Local Node.js Development Environment Using Docker — Part 2",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker-part-2/",
+            "description": "Advanced local development setup for Node.js with Docker."
+        },
+        {
+            "id": "a-docker-nginx",
+            "type": "article",
+            "title": "How to Use the NGINX Docker Official Image",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/",
+            "description": "Guide to deploying and configuring NGINX using Docker."
+        },
+        {
+            "id": "a-docker-python",
+            "type": "article",
+            "title": "How Developers Can Get Started with Python and Docker",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-developers-can-get-started-with-python-and-docker/",
+            "description": "Beginner's guide to Python development with Docker."
+        },
+        {
+            "id": "a-docker-fastapi",
+            "type": "article",
+            "title": "Video: How to Dockerize a Python App with FastAPI",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/video-how-to-dockerize-a-python-app-with-fastapi/",
+            "description": "Tutorial on containerizing Python FastAPI applications."
+        },
+        {
+            "id": "a-docker-dapr",
+            "type": "article",
+            "title": "Video: Docker Build: Simplify Cloud-native Development with Docker & DAPR",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/28485-2/",
+            "description": "Tutorial on cloud-native development using Docker and DAPR."
+        },
+        {
+            "id": "a-docker-own-registry",
+            "type": "article",
+            "title": "How to Use Your Own Registry",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-use-your-own-registry-2/",
+            "description": "Setting up and managing private Docker registries."
+        },
+        {
+            "id": "a-docker-desktop-hub",
+            "type": "article",
+            "title": "Using Docker Desktop and Docker Hub Together — Part 1",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/using-docker-desktop-and-docker-hub-together-part-1/",
+            "description": "Workflow integration between Docker Desktop and Docker Hub."
+        },
+        {
+            "id": "a-docker-hub-build-test",
+            "type": "article",
+            "title": "How to Build and Test Your Docker Images in the Cloud with Docker Hub",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-build-and-test-your-docker-images-in-the-cloud-with-docker-hub/",
+            "description": "Automating image builds and testing using Docker Hub's CI features."
+        },
+        {
+            "id": "a-docker-top-questions",
+            "type": "article",
+            "title": "Top Questions for Getting Started with Docker",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/top-questions-for-getting-started-with-docker/",
+            "description": "Answers to common beginner questions about Docker."
+        },
+        {
+            "id": "a-docker-uffizzi",
+            "type": "article",
+            "title": "Taking Your App Live with Docker and the Uffizzi App Platform",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/taking-your-app-live-with-docker-and-the-uffizzi-app-platform/",
+            "description": "Deploying containerized applications to production with Uffizzi."
+        },
+        {
+            "id": "a-docker-continuous-previews",
+            "type": "article",
+            "title": "Continuous Previews (CP): Don't Merge Until You Preview",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/continuous-previews-cp-dont-merge-until-you-preview/",
+            "description": "Introduction to continuous preview environments for development."
+        },
+        {
+            "id": "a-docker-azure-aci",
+            "type": "article",
+            "title": "How To Deploy Containers to Azure ACI using Docker CLI and Compose",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-deploy-containers-to-azure-aci-using-docker-cli-and-compose/",
+            "description": "Step-by-step guide for deploying to Azure Container Instances."
+        },
+        {
+            "id": "a-docker-aws-resources",
+            "type": "article",
+            "title": "Docker and AWS Resources for Developers",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/docker-and-aws-resources-for-developers/",
+            "description": "Resources and guides for using Docker with AWS services."
+        },
+        {
+            "id": "a-docker-hub-orgs",
+            "type": "article",
+            "title": "How To Manage Docker Hub Organizations and Teams",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/how-to-manage-docker-hub-organizations-and-teams/",
+            "description": "Guide to managing team access and permissions in Docker Hub."
+        },
+        {
+            "id": "a-docker-rate-limits",
+            "type": "article",
+            "title": "Understanding Inner Loop Development and Pull Rates (Rate Limits)",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/tag/rate-limit/",
+            "description": "Explanation of Docker Hub rate limits and local development workflows."
+        },
+        {
+            "id": "a-docker-business-recap",
+            "type": "article",
+            "title": "Webinar Recap: Docker Business — Management & Security at Scale",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/webinar-recap-docker-business-management-security-at-scale/",
+            "description": "Summary of enterprise Docker management and security features."
+        },
+        {
+            "id": "a-dockercon-cfp",
+            "type": "article",
+            "title": "DockerCon: What Makes a Successful CFP Submission",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/dockercon-what-makes-a-successful-cfp-submission/",
+            "description": "Tips for submitting successful conference talk proposals."
+        },
+        {
+            "id": "a-docker-talks-july",
+            "type": "article",
+            "title": "July Recap: Docker Talks Live Stream",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/docker-talks-live-stream-monthly-recap/",
+            "description": "Monthly summary of Docker Talks live stream content."
+        },
+        {
+            "id": "a-docker-talks-august",
+            "type": "article",
+            "title": "August Recap: Docker Talks Live Stream",
+            "outlet": "Docker Blog",
+            "era": "Docker",
+            "link": "https://www.docker.com/blog/docker-talks-live-stream-monthly-recap-2/",
+            "description": "Monthly summary of Docker Talks live stream content."
+        },
+
+        {
+            "id": "t-clean-code-webinar",
+            "type": "talk",
+            "title": "Clean Code Principles and Practices",
+            "outlet": "Sonar Webinar",
+            "era": "Sonar",
+            "link": "https://www.sonarsource.com/resources/webinars/clean-code-principles-and-practices/",
+            "description": "Introduction to clean code methodology and implementation strategies."
+        },
+        {
+            "id": "t-clean-code-webinar-2",
+            "type": "talk",
+            "title": "Clean Code Principles and Practices Part II: Mastering Clean Code",
+            "outlet": "Sonar Webinar",
+            "era": "Sonar",
+            "link": "https://community.sonarsource.com/t/webinar-clean-code-principles-and-practices-part-ii-mastering-clean-code/98558",
+            "description": "Advanced clean code techniques and real-world application."
+        },
+        {
+            "id": "t-warp-speed-webinar",
+            "type": "talk",
+            "title": "Code Quality at Warp Speed: Powering Up Continuous Delivery with Static Code Analysis",
+            "outlet": "Sonar Webinar",
+            "era": "Sonar",
+            "link": "https://community.sonarsource.com/t/webinar-code-quality-at-warp-speed-powering-up-continuous-delivery-with-static-code-analysis/119462",
+            "description": "Integrating static analysis into CI/CD pipelines for faster, safer releases."
+        },
+        {
+            "id": "t-geneva-meetup",
+            "type": "talk",
+            "title": "Foundations for Clean Code",
+            "outlet": "Clean Code Meetup, Geneva",
+            "date": "Jun 2023",
+            "era": "Sonar",
+            "description": "Live, in-person presentation on clean code fundamentals."
+        },
+        {
+            "id": "t-sdtimes-improve-testing",
+            "type": "talk",
+            "title": "Improve: Testing",
+            "outlet": "SD Times",
+            "era": "Sonar",
+            "link": "https://sdtimes.com/attend-improve-testing-on-3-20/",
+            "description": "Virtual event speaker, one of eight testing experts on the program."
+        },
+        {
+            "id": "t-pulumi-continuous-previews",
+            "type": "talk",
+            "title": "Continuous Previews: Using Infrastructure as Code to Continuously Share and Preview Your Application",
+            "outlet": "Pulumi Cloud Engineering Summit",
+            "date": "2021",
+            "era": "Docker",
+            "link": "https://www.pulumi.com/resources/continuous-previews-infrastructure-as-code/",
+            "description": "Implementing per-PR preview environments with IaC tools."
+        },
+        {
+            "id": "t-dockercon-getting-started",
+            "type": "talk",
+            "title": "How to Get Started with Docker",
+            "outlet": "DockerCon",
+            "date": "2020",
+            "era": "Docker",
+            "link": "https://www.youtube.com/watch?v=iqqDU2crIEQ",
+            "description": "Beginner-friendly introduction to Docker fundamentals, now past 430K views."
+        },
+        {
+            "id": "t-dockercon-build-test",
+            "type": "talk",
+            "title": "How to Build and Test Your Docker Images in the Cloud",
+            "outlet": "DockerCon",
+            "date": "2020",
+            "era": "Docker",
+            "description": "Automating Docker image builds and testing pipelines."
+        },
+        {
+            "id": "t-dockercon-emcee",
+            "type": "talk",
+            "title": "Event Emcee & Panel Moderator",
+            "outlet": "DockerCon LIVE",
+            "date": "2021",
+            "era": "Docker",
+            "description": "Hosted and moderated sessions at DockerCon LIVE."
+        },
+        {
+            "id": "t-docker-talks-stream",
+            "type": "talk",
+            "title": "Docker Talks (weekly live stream)",
+            "outlet": "Docker YouTube",
+            "era": "Docker",
+            "description": "Weekly series co-hosted with Chad Metcalf covering Node.js development, the VS Code Docker extension, Awesome Compose, beginner questions, and remote debugging."
+        },
+        {
+            "id": "t-pandemic-survival",
+            "type": "talk",
+            "title": "The Developer's Pandemic Survival Guide",
+            "outlet": "CFE.dev",
+            "era": "Docker",
+            "link": "https://cfe.dev/events/developers-pandemic-survival/",
+            "description": "Strategies for managing stress, burnout, and work-life balance during challenging times."
+        },
+        {
+            "id": "t-jfrog-devops",
+            "type": "talk",
+            "title": "End-to-End DevOps for Containerized Applications with JFrog and Docker",
+            "outlet": "JFrog",
+            "era": "Docker",
+            "link": "https://jfrog.com/community/cloud-native/end-to-end-devops-for-containerized-applications-with-jfrog-and-docker/",
+            "description": "Guest talk on integrating JFrog and Docker in DevOps pipelines."
+        },
+
+        {
+            "id": "p-devinterrupted",
+            "type": "podcast",
+            "title": "Finding the Best Gen AI Use Case for Your Dev Team",
+            "outlet": "Dev Interrupted",
+            "date": "Aug 2024",
+            "era": "Sonar",
+            "link": "https://devinterrupted.substack.com/p/finding-the-best-gen-ai-use-case",
+            "description": "Podcast interview on where generative AI actually helps engineering teams, and how to roll it out."
+        },
+        {
+            "id": "p-techstrong-ai-leadership",
+            "type": "podcast",
+            "title": "AI Leadership Insights: Clean Code",
+            "outlet": "Techstrong.ai",
+            "era": "Sonar",
+            "link": "https://techstrong.ai/videos/ai-leadership-insights-clean-code/",
+            "description": "Video interview on clean code in the age of AI."
+        },
+        {
+            "id": "p-testguild",
+            "type": "podcast",
+            "title": "Leveraging AI for Secure DevOps",
+            "outlet": "Test Guild",
+            "era": "Sonar",
+            "link": "https://testguild.com/podcast/performance/p158-peter/",
+            "description": "Deep dive into AI's role in security, static analysis, and technical debt."
+        },
+        {
+            "id": "p-techstrong-tv",
+            "type": "podcast",
+            "title": "Optimizing the DevOps Workflow with Clean Code",
+            "outlet": "Techstrong TV",
+            "era": "Sonar",
+            "link": "https://techstrong.tv/videos/interviews/optimizing-the-devops-workflow-with-clean-code-peter-mckee-sonar",
+            "description": "Video interview on code quality, DevOps practices, and clean code methodology."
+        },
+        {
+            "id": "p-unite-ai",
+            "type": "podcast",
+            "title": "Head of Developer Relations at Sonar — Interview Series",
+            "outlet": "Unite.AI",
+            "date": "Dec 2023",
+            "era": "Sonar",
+            "link": "https://www.unite.ai/peter-mckee-head-of-developer-relations-at-sonar-interview-series/",
+            "description": "Written interview on career path, Sonar's mission, and the future of AI in coding."
+        },
+        {
+            "id": "p-talk-python",
+            "type": "podcast",
+            "title": "Docker for Python Developers (Episode #308)",
+            "outlet": "Talk Python To Me",
+            "date": "2021",
+            "era": "Docker",
+            "link": "https://talkpython.fm/episodes/show/308/docker-for-python-developers-2021-edition",
+            "description": "Deep dive into Docker workflows for Python development."
+        },
+        {
+            "id": "p-develomentor",
+            "type": "podcast",
+            "title": "Developer Relations Manager, Programming Mentor (Episode #120)",
+            "outlet": "Develomentor",
+            "date": "Jan 2021",
+            "era": "Docker",
+            "link": "https://develomentor.com/2021/01/04/peter-mckee-developer-relations-manager-programming-mentor-120/",
+            "description": "Career journey discussion covering DevRel, mentoring, and software development."
+        },
+        {
+            "id": "p-siliconangle",
+            "type": "podcast",
+            "title": "Docker Community Initiatives",
+            "outlet": "SiliconANGLE / theCUBE",
+            "date": "Jun 2020",
+            "era": "Docker",
+            "link": "https://siliconangle.com/2020/06/03/docker-plans-community-contribution-program-build-world-class-learning-center-dockercon/",
+            "description": "Video interview at DockerCon on Docker's community contribution program and learning center plans."
+        }
+    ],
+    "profiles": [
+        { "label": "Docker Blog author page", "link": "https://www.docker.com/blog/author/peter-mckee/" },
+        { "label": "The New Stack author page", "link": "https://thenewstack.io/author/peter-mckee/" },
+        { "label": "DevOps.com author page", "link": "https://devops.com/author/peter-mckee/" },
+        { "label": "InformationWeek author page", "link": "https://www.informationweek.com/author/peter-mckee" },
+        { "label": "ConferenceCast.tv", "link": "https://www.conferencecast.tv/speaker-53368-peter-mckee" },
+        { "label": "CFE.dev speaker profile", "link": "https://cfe.dev/speakers/peter-mckee/" }
+    ]
+}
