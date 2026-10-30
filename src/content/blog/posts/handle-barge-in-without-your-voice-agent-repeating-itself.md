@@ -28,7 +28,7 @@ Agent:  Check-in is from three PM. You'll need to bring a photo ID and the card 
 
 Look at the second `Caller:` line. That's the agent's own voice, transcribed as if the caller had said it. The agent heard itself and started over, and on this run it never got round to answering the parking question at all.
 
-The fix for this isn't in the prompt, it's in the client. So I built a small Python client that handles barge-in on PolyAI's Dialog-RSN-1 API, which is the one I work on. It stops its voice as soon as the server confirms the caller is talking, and it tells the server how many milliseconds of the reply actually played, so the conversation history ends at "...the card you booked-" instead of holding sentences nobody heard. It also logs what the caller heard, not what the model wrote, and it doesn't hear itself.
+The fix for this isn't in the prompt, it's in the client. So I built a small Python client that handles barge-in on PolyAI's Dialog-RSN-1 API. It stops its voice as soon as the server confirms the caller is talking, and it tells the server how many milliseconds of the reply actually played, so the conversation history ends at "...the card you booked-" instead of holding sentences nobody heard. It also logs what the caller heard, not what the model wrote, and it doesn't hear itself.
 
 I measured every piece of it on calls to the public API in October 2026, using a scripted caller you can run yourself without a microphone. One of those measurements surprised me: the echo canceller that fixes the problem on speakers breaks barge-in on headphones.
 

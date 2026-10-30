@@ -16,7 +16,7 @@ The slowness could be coming from a few places. The server might be waiting too 
 
 So I built a small Python tool to do that splitting. It plays a recorded caller into a realtime voice API at real speed and stamps four moments on the same clock: when the caller stopped talking, when the server confirmed the turn, when the first words of the reply arrived as text, and when the first reply audio arrived. Run it twenty or thirty times and it gives you the median and the 95th percentile of each.
 
-In this post I'll walk through how the tool works, and then run it against PolyAI's Dialog-RSN-1 API, which is the one I work on, so you can see what the numbers look like in practice.
+In this post I'll walk through how the tool works, and then run it against PolyAI's Dialog-RSN-1 API so you can see what the numbers look like in practice.
 
 The first thing the tool taught me was where not to start the clock. The obvious place is the server's own end-of-speech marker, but on Dialog-RSN-1 that marker landed about 560 ms after the caller's last word. If you time from there, you hide most of the wait.
 
