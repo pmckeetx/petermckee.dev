@@ -250,7 +250,7 @@ await ctx.resume();
 let stream;
 try {
   // Echo cancellation stops the agent hearing itself. Noise suppression stays off:
-  // Dialog-RSN-1 is trained on real, noisy calls and uses cues that suppression removes.
+  // Dialog-RSN-1 is trained on realistic noisy calls and uses cues that suppression removes.
   stream = await navigator.mediaDevices.getUserMedia({
     audio: { echoCancellation: true, noiseSuppression: false, autoGainControl: true },
   });
