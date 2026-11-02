@@ -37,7 +37,7 @@ interface Props {
 // rehype-slug (for the table of contents + deep links); fenced code is syntax
 // highlighted by rehype-highlight and wrapped with a copy button by CodeBlock.
 export const BlogMarkdown: FC<Props> = ({ children }) => {
-    const inlineCodeBg = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
+    const inlineCodeBg = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
     const quoteBorder = useColorModeValue("primary.500", "primary.300");
     const quoteColor = useColorModeValue("gray.600", "gray.300");
     const borderColor = useColorModeValue("blackAlpha.200", "whiteAlpha.200");
@@ -143,8 +143,12 @@ export const BlogMarkdown: FC<Props> = ({ children }) => {
                                 mx="0.5"
                                 borderRadius="md"
                                 bg={inlineCodeBg}
+                                borderWidth="1px"
+                                borderColor="whiteAlpha.100"
+                                color="gray.100"
                                 fontSize="0.85em"
                                 fontFamily="mono"
+                                wordBreak="break-word"
                                 {...props}
                             >
                                 {children}

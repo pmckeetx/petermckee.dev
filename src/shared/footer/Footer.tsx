@@ -1,11 +1,14 @@
 import { FC } from "react";
 
-import { Box, Heading, Flex, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
+
+import { Box, Heading, Flex, HStack, Link, Text } from "@chakra-ui/react";
 
 import { configs } from "shared/content/Content";
 import { PageHeader } from "shared/page-header/PageHeader";
 import { onMailTo } from "utils/Functions";
 import { Socials } from "shared/socials/Socials";
+import { NAV_ITEMS } from "shared/site-header/SiteHeader";
 
 const headerStyles = {
     cursor: "pointer",
@@ -31,6 +34,35 @@ export const Footer: FC = () => {
             <Box pt="16">
                 <Socials delay={100} exclude={["mail"]} />
             </Box>
+            <HStack
+                as="nav"
+                aria-label="Footer"
+                spacing={{ base: 5, md: 8 }}
+                rowGap="3"
+                wrap="wrap"
+                justifyContent={{ base: "center", md: "flex-start" }}
+                pt="12"
+                mt="12"
+                borderTop="1px solid"
+                borderColor="whiteAlpha.200"
+            >
+                {NAV_ITEMS.map((item) => (
+                    <Link
+                        key={item.label}
+                        as={NextLink}
+                        href={item.href}
+                        color="gray.300"
+                        fontWeight="600"
+                        _hover={{ color: "primary.500" }}
+                    >
+                        {item.label}
+                    </Link>
+                ))}
+                {/* A static file, so a plain link rather than a client-side route change. */}
+                <Link href="/rss.xml" color="gray.300" fontWeight="600" _hover={{ color: "primary.500" }}>
+                    RSS
+                </Link>
+            </HStack>
             <Flex
                 pt="4"
                 pb="2"

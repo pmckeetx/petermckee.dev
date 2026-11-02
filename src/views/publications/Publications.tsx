@@ -190,7 +190,7 @@ export const Publications: FC = () => {
     const linkColor = useColorModeValue("gray.600", "gray.300");
 
     return (
-        <BlogLayout secondaryHref="/" secondaryLabel="Home">
+        <BlogLayout>
             <BlogSeo title="Publications • Peter McKee" description={SUBTITLE} path="/publications" type="website" />
 
             <Heading fontSize={{ base: "4xl", md: "6xl" }} lineHeight="1">

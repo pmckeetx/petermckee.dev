@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useRouter } from "next/router";
 
-import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 import { PostMeta } from "lib/blog-types";
 import { PageHeader } from "shared/page-header/PageHeader";
@@ -50,7 +50,7 @@ export const BlogLanding: FC<Props> = ({ posts, tags, activeTag = null }) => {
     const seoPath = activeTag ? `/blog/tag/${encodeURIComponent(activeTag)}` : "/blog";
 
     return (
-        <BlogLayout secondaryHref={activeTag ? "/blog" : undefined} secondaryLabel="All posts">
+        <BlogLayout>
             <BlogSeo title={seoTitle} description={SUBTITLE} path={seoPath} type="website" />
 
             <Heading fontSize={{ base: "4xl", md: "6xl" }} lineHeight="1">
@@ -67,7 +67,7 @@ export const BlogLanding: FC<Props> = ({ posts, tags, activeTag = null }) => {
 
             {showFeatured && (
                 <>
-                    <PageHeader label="Featured" />
+                    <PageHeader label="Featured" compact />
                     <Stack spacing="6">
                         {featured.map((post) => (
                             <BlogCard key={post.slug} post={post} featured />
@@ -76,13 +76,13 @@ export const BlogLanding: FC<Props> = ({ posts, tags, activeTag = null }) => {
                 </>
             )}
 
-            <PageHeader label={activeTag ? `${list.length} article${list.length === 1 ? "" : "s"}` : "Latest"} />
+            <PageHeader label={activeTag ? `${list.length} article${list.length === 1 ? "" : "s"}` : "Latest"} compact />
             {list.length > 0 ? (
-                <Box>
+                <SimpleGrid columns={{ base: 1, md: 2 }} spacingX="10" spacingY="14">
                     {list.map((post) => (
                         <BlogCard key={post.slug} post={post} />
                     ))}
-                </Box>
+                </SimpleGrid>
             ) : (
                 <Text fontSize="lg" color="gray.500">
                     No articles found{q ? ` for “${query.trim()}”` : ""}.
