@@ -14,7 +14,8 @@ const config: ThemeConfig = {
 
 const fonts = {
     body: "'Urbanist', sans-serif",
-    heading: "'Playfair Display', serif;",
+    heading: "'Playfair Display', serif",
+    mono: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
 };
 
 const colors = {

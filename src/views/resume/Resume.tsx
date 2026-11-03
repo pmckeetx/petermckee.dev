@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { useRouter } from "next/router";
 
 import {
     Box,
@@ -18,11 +17,10 @@ import {
 
 import { configs } from "shared/content/Content";
 import { Footer } from "shared/footer/Footer";
-import { LogoType } from "shared/navbar/logo-type/LogoType";
+import { SiteHeader } from "shared/site-header/SiteHeader";
 import { PageHeader } from "shared/page-header/PageHeader";
-import { bgDark, bgLight } from "theme";
 import { onResumeOpen } from "utils/Functions";
-import { ArrowLeftIcon, DownloadIcon, GitHubIcon } from "utils/Icons";
+import { DownloadIcon, GitHubIcon } from "utils/Icons";
 
 interface Skill {
     category: string;
@@ -121,42 +119,23 @@ const ProjectItem: FC<{ project: Project }> = ({ project }) => {
 };
 
 export const Resume: FC = () => {
-    const router = useRouter();
-    const bg = useColorModeValue(bgLight, bgDark);
     const metaColor = useColorModeValue("gray.500", "gray.400");
     const { name, title, location, email, summary, skills, experience, projects } = configs.resume;
 
     return (
         <Box>
-            <Box bg={bg} position="fixed" top="0" w="100%" left="50%" transform="translate(-50%)" zIndex="10">
-                <Container py="4" px="4">
-                    <Flex justifyContent="space-between" alignItems="center">
-                        <Box onClick={() => router.push("/")}>
-                            <LogoType text={configs.common.logoType} />
+            <SiteHeader
+                actions={
+                    <Button size="sm" borderRadius="lg" leftIcon={<DownloadIcon />} onClick={onResumeOpen}>
+                        <Box as="span" display={{ base: "none", sm: "inline" }}>
+                            Download PDF
                         </Box>
-                        <Flex alignItems="center" gap={{ base: 3, md: 6 }}>
-                            <Button
-                                variant="link"
-                                color={useColorModeValue("gray.800", "white")}
-                                leftIcon={<ArrowLeftIcon />}
-                                onClick={() => router.push("/")}
-                            >
-                                <Box as="span" display={{ base: "none", sm: "inline" }}>
-                                    Back to site
-                                </Box>
-                            </Button>
-                            <Button size="sm" borderRadius="lg" leftIcon={<DownloadIcon />} onClick={onResumeOpen}>
-                                <Box as="span" display={{ base: "none", sm: "inline" }}>
-                                    Download PDF
-                                </Box>
-                                <Box as="span" display={{ base: "inline", sm: "none" }}>
-                                    PDF
-                                </Box>
-                            </Button>
-                        </Flex>
-                    </Flex>
-                </Container>
-            </Box>
+                        <Box as="span" display={{ base: "inline", sm: "none" }}>
+                            PDF
+                        </Box>
+                    </Button>
+                }
+            />
 
             <Container h="100%" px={{ base: 6, md: 6, lg: 4 }}>
                 <Box pt={{ base: "112px", md: "128px" }} pb="16">

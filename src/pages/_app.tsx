@@ -19,7 +19,7 @@ const forceDarkManager = {
 };
 
 import "aos/dist/aos.css";
-import "highlight.js/styles/github-dark.css";
+import "highlight.js/styles/github-dark-dimmed.css";
 import "../index.scss";
 import "../App.scss";
 

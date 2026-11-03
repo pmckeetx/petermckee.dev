@@ -20,9 +20,7 @@ export const BlogCard: FC<Props> = ({ post, featured = false }) => {
             as="article"
             data-aos="fade-up"
             data-aos-offset="120"
-            py={featured ? "6" : "8"}
-            borderTopWidth={featured ? "0" : "1px"}
-            borderColor={useColorModeValue("blackAlpha.200", "whiteAlpha.200")}
+            py={featured ? "2" : "0"}
         >
             <Flex
                 direction={{ base: "column", md: featured ? "row" : "column" }}
@@ -37,7 +35,8 @@ export const BlogCard: FC<Props> = ({ post, featured = false }) => {
                             borderRadius="xl"
                             objectFit="cover"
                             w="100%"
-                            h={featured ? { base: "220px", md: "320px" } : "200px"}
+                            sx={{ aspectRatio: "1200 / 630" }}
+                            bg="whiteAlpha.100"
                             transition="transform 0.4s ease-in-out"
                             _hover={{ transform: "scale(1.01)" }}
                         />
@@ -62,8 +61,8 @@ export const BlogCard: FC<Props> = ({ post, featured = false }) => {
                     </Text>
                     <LinkOverlay as={NextLink} href={`/blog/${post.slug}`}>
                         <Heading
-                            fontSize={featured ? { base: "3xl", md: "4xl" } : "2xl"}
-                            lineHeight="1.1"
+                            fontSize={featured ? { base: "3xl", md: "4xl" } : { base: "2xl", md: "2xl" }}
+                            lineHeight="1.15"
                             mt="2"
                             _hover={{ color: "primary.500" }}
                         >

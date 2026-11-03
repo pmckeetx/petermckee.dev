@@ -42,7 +42,7 @@ export const AuthorPage: FC<Props> = ({ author, posts }) => {
     const metaColor = useColorModeValue("gray.500", "gray.400");
 
     return (
-        <BlogLayout secondaryHref="/blog" secondaryLabel="All posts">
+        <BlogLayout>
             <BlogSeo title={`${author.name} • Peter McKee`} description={author.bio} path={`/blog/author/${author.id}`} type="website" />
 
             <Flex gap={{ base: 6, md: 10 }} direction={{ base: "column", md: "row" }} align={{ md: "center" }}>
