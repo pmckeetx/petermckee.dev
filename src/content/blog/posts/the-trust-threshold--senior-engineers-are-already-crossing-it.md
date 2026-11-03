@@ -2,13 +2,13 @@
 title: "The Trust Threshold: Senior Engineers Are Already Crossing It"
 date: 2026-05-20
 author: "peter"
-excerpt: "Why ShrikeDB uses extendible hashing for its keyspace, and how it avoids the stop-the-world rehash that bites most open-addressing tables."
+excerpt: "Senior engineers at Spotify, Anthropic and OpenAI have stopped writing code by hand. What that trust takes, and why the harness matters more than the model."
 description: "In February 2026, Spotify's co-CEO told Wall Street that his best engineers hadn't written a single line of code since December. At Anthropic, 70–90% of all code is now AI-generated. At OpenAI, a three-person team shipped roughly a million lines of production software with zero human keystrokes on the code itself. The real tipping point in AI-assisted development was never going to be a benchmark or a model release—it was the moment senior engineers genuinely started trusting the output. That moment has arrived. Here's what that trust actually requires, why the harness matters more than the model, and what engineering looks like on the other side."
 hero: "/assets/trust-blog.png"
-heroAlt: "Diagram of an extendible hash table"
+heroAlt: "An engineer at a monitor beside a panel of AI trust metrics: code integrity, a clean security scan and passing unit tests"
 featured: true
 draft: false
-tags: ["Rust", "Databases", "Systems"]
+tags: ["AI", "Claude Code", "Software Engineering"]
 ---
 
 On February 10th, 2026, Spotify's co-CEO Gustav Söderström got on a quarterly earnings call, the kind of call where executives talk about subscriber growth and gross margin, and said something that stopped a lot of engineers mid-scroll.
