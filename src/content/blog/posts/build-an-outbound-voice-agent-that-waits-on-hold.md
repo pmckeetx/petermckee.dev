@@ -16,7 +16,7 @@ Before a human ever answers, an outbound agent has to survive an automated gaunt
 
 In this post, we'll build a Python agent using PolyAI's [Dialog-RSN-1](https://docs.poly.ai/dialog-rsn-1/overview) API that dials a pharmacy to verify whether a patient's prescription is ready. It navigates the phone tree by pressing 2, sits patiently through the hold music without uttering a syllable, and then steps into the conversation within roughly a second of the pharmacist finishing his greeting.
 
-The surprising part is what we *don't* need. There are no hold-music detectors, no custom voice-activity filters, and no heuristic human-detection scripts. Because Dialog-RSN-1 hears the raw audio stream directly, it can perceive the difference between hold music, canned recordings, and live speech on its own. To make it work, the agent only needs two architectural choices: a deliberate way to answer a conversational turn by choosing silence, and an event loop that knows when *not* to ask the model to speak.
+There are no hold-music detectors, no custom voice-activity filters, and no heuristic human-detection scripts. Because Dialog-RSN-1 hears the raw audio stream directly, it can perceive the difference between hold music, canned recordings, and live speech on its own. To make it work, the agent only needs two architectural choices: a deliberate way to answer a conversational turn by choosing silence, and an event loop that knows when *not* to ask the model to speak.
 
 Code: [pmckeetx/on-hold-voice-agent](https://github.com/pmckeetx/on-hold-voice-agent)
 
