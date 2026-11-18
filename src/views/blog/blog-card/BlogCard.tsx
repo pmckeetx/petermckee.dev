@@ -14,6 +14,8 @@ interface Props {
 
 export const BlogCard: FC<Props> = ({ post, featured = false }) => {
     const metaColor = useColorModeValue("gray.500", "gray.400");
+    // A post published elsewhere links straight to it, and says where in place of the reading time.
+    const externalHost = post.externalUrl ? new URL(post.externalUrl).hostname.replace(/^www\./, "") : null;
 
     return (
         <LinkBox
@@ -57,9 +59,13 @@ export const BlogCard: FC<Props> = ({ post, featured = false }) => {
                         </Text>
                     )}
                     <Text color={metaColor} fontSize="sm" fontWeight="600">
-                        {formatDate(post.date)} • {post.readingTime}
+                        {formatDate(post.date)} • {externalHost ? `On ${externalHost}` : post.readingTime}
                     </Text>
-                    <LinkOverlay as={NextLink} href={`/blog/${post.slug}`}>
+                    <LinkOverlay
+                        as={externalHost ? undefined : NextLink}
+                        href={post.externalUrl ?? `/blog/${post.slug}`}
+                        isExternal={Boolean(externalHost)}
+                    >
                         <Heading
                             fontSize={featured ? { base: "3xl", md: "4xl" } : { base: "2xl", md: "2xl" }}
                             lineHeight="1.15"

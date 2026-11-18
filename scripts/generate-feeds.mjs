@@ -42,6 +42,7 @@ const readPosts = () => {
                 excerpt: data.excerpt || "",
                 tags: data.tags || [],
                 draft: Boolean(data.draft),
+                externalUrl: data.externalUrl || null, // published elsewhere: the feed links there, the sitemap skips it
             };
         })
         .filter((post) => !post.draft) // feeds are public — never include drafts
@@ -53,8 +54,8 @@ const buildRss = (posts) => {
         .map(
             (post) => `        <item>
             <title>${escapeXml(post.title)}</title>
-            <link>${SITE_URL}/blog/${post.slug}</link>
-            <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>
+            <link>${post.externalUrl || `${SITE_URL}/blog/${post.slug}`}</link>
+            <guid isPermaLink="true">${post.externalUrl || `${SITE_URL}/blog/${post.slug}`}</guid>
             <pubDate>${new Date(post.date).toUTCString()}</pubDate>
             <description>${escapeXml(post.excerpt)}</description>
         </item>`,
@@ -82,7 +83,7 @@ const buildSitemap = (posts) => {
         "/resume",
         "/blog",
         "/publications",
-        ...posts.map((post) => `/blog/${post.slug}`),
+        ...posts.filter((post) => !post.externalUrl).map((post) => `/blog/${post.slug}`),
         ...tags.map((tag) => `/blog/tag/${encodeURIComponent(tag)}`),
         ...authors.map((author) => `/blog/author/${author.id}`),
     ];
