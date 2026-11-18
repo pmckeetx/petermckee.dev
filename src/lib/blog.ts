@@ -49,6 +49,7 @@ const readPost = (slug: string): Post | null => {
         featured: Boolean(data.featured),
         draft: Boolean(data.draft),
         readingTime: readingTime(content).text,
+        externalUrl: (data.externalUrl as string) || null,
     };
 
     return { meta, body: content };
@@ -65,14 +66,17 @@ export const getAllPosts = (): Post[] =>
 /** Lightweight metadata list (no bodies) for listing/filtering pages. */
 export const getAllPostsMeta = (): PostMeta[] => getAllPosts().map((post) => post.meta);
 
+/** Posts with a page on this site: everything except the ones that link out to another site. */
+const getOnSitePostsMeta = (): PostMeta[] => getAllPostsMeta().filter((post) => !post.externalUrl);
+
 export const getPostBySlug = (slug: string): Post | null => {
     const post = readPost(slug);
-    if (!post) return null;
+    if (!post || post.meta.externalUrl) return null;
     if (isProd && post.meta.draft) return null;
     return post;
 };
 
-export const getAllSlugs = (): string[] => getAllPosts().map((post) => post.meta.slug);
+export const getAllSlugs = (): string[] => getOnSitePostsMeta().map((post) => post.slug);
 
 export const getAllTags = (): string[] => {
     const tags = new Set<string>();
@@ -92,7 +96,7 @@ export const getPostsByAuthor = (id: string): PostMeta[] =>
 
 /** Posts sharing the most tags with the given post, newest first, capped. */
 export const getRelated = (slug: string, limit = 3): PostMeta[] => {
-    const all = getAllPostsMeta();
+    const all = getOnSitePostsMeta();
     const current = all.find((post) => post.slug === slug);
     if (!current) return [];
 
@@ -110,7 +114,7 @@ export const getRelated = (slug: string, limit = 3): PostMeta[] => {
 
 /** Date-adjacent posts. `newer` is the next post forward in time, `older` the previous. */
 export const getPrevNext = (slug: string): { older: PostMeta | null; newer: PostMeta | null } => {
-    const all = getAllPostsMeta(); // newest first
+    const all = getOnSitePostsMeta(); // newest first
     const index = all.findIndex((post) => post.slug === slug);
     if (index === -1) return { older: null, newer: null };
 

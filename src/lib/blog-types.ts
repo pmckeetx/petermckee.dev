@@ -27,6 +27,8 @@ export interface PostMeta {
     featured: boolean;
     draft: boolean;
     readingTime: string; // e.g. "5 min read"
+    // Set when the post is published elsewhere (dev.to): its card links out and no page is built for it.
+    externalUrl: string | null;
 }
 
 export interface Post {
